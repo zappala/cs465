@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS 465 Computer Security</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/5.3.3/css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/5.3.3/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
+    <link href="/static/css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
+      <div class="row">
+	<div class="course small-12 large-8 columns">
+	  <a href={{url_for("show",directory=None,page="index")}}>CS 465 Computer Security</a>
+	</div>
+	<div class="university small-12 large-4 columns">
+	  <a class="borderright" href="https://byu.edu">BYU </a>&nbsp;<a href="https://cs.byu.edu">Computer Science</a>
+	</div>
+      </div>
+    </div>
+    {% if active != "home" %}
+    <div class="contain-to-grid">
+      <nav class="top-bar" data-topbar>
+	<ul class="title-area">
+	  <li><h1>{% block term %}{% endblock %}</h1>
+	  </li>
+	  <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+	</ul>
+	<section class="top-bar-section">
+
+	  <!-- Left Nav Section -->
+	  <ul class="left">
+	    {% block menu %}{% endblock %}
+	  </ul>
+	</section>
+      </nav>
+    </div>
+    {% endif %}
+
+    <div id="page" class="text">
+      <div class="row">
+	{% block page %}{% endblock %}
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="row">
+	<div id="license">
+	</div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/foundation/5.3.3/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+  </body>
+</html>
