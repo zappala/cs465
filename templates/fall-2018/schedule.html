@@ -7,8 +7,6 @@
 <p>This schedule is <u>subject to change</u>. Assignments may be changed
 up until the day they are assigned.</p>
 
-<h2>Section 1: TTh 3:00pm 2113 JKB</h2>
-
 {% for week in weeks %}
 <h2 class="plain">Week {{ week.number }}</h2>
 
@@ -17,23 +15,28 @@ up until the day they are assigned.</p>
 
   <div class="day">{{ day.date }}</div>
 
-  <div>
+  <div class="row content">
+    <div class="col-sm">
     {% if day.section %}
-    <div class="content">
       <span class="section">{{ day.section }}</span> {% if day.topic %} | <span class="topic">{{ day.topic }}</span>{% endif %}
       <ul>
 	  {% for reading in day.readings %}
 	  <li>{{ reading|safe }}</li>
 	  {% endfor %}
-	  {% for slides in day.slides %}
-	  <li>{{ reading|safe }}</li>
+	  {% for slide in day.slides %}
+	  <li>{{ slide|safe }}</li>
 	  {% endfor %}
       </ul>
-    </div>
     {% endif %}
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
     {% for assignment in day.assignments %}
-    <div class="assignment">{{ assignment|safe }}</div>
+    <li>{{ assignment|safe }}</li>
     {% endfor %}
+    </ul>
+    </div>
   </div>
 </div>
 	

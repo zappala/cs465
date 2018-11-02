@@ -17,7 +17,7 @@ class Day:
         else:
             self.readings.append('Reading: ' + text)
 
-    def slides(self,text,link=None):
+    def slide(self,text,link=None):
         if link:
             self.slides.append('Slides: <a href="%s">%s</a>' % (link,text))
         else:

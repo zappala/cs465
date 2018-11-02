@@ -8,14 +8,16 @@ from flaskext.markdown import Markdown
 
 from config import app, freezer
 
-Markdown(app)
+Markdown(app,extensions=["fenced_code","tables"])
 
-@app.route('/',defaults={'directory':None,'page':'index'})
+@app.route('/')
+def index():
+    return render_template('index.html',active='index')
+
 @app.route('/<page>',defaults={'directory':None})
 @app.route('/<path:directory>/',defaults={'page':'index'})
 @app.route('/<path:directory>/<page>')
 def show(directory,page):
-#    try:
         if not directory:
             return render_template(page + '.html', active='home')
         try:
@@ -23,8 +25,6 @@ def show(directory,page):
         except:
             prev = None
         return render_template(directory+"/" + page + '.html', active=page, previous=prev)
-#    except:
-#        return render_template('404.html'), 404
 
 @freezer.register_generator
 def custom404():
