@@ -72,6 +72,7 @@ def fall2018schedule():
     d.assignment("Homework #4",term + 'homework/homework4')
     
     d = s.day("September 27")
+    d.reading("Chapter 4.4")
     d.lecture("Diffie-Hellman")
     d.slide("Diffie-Hellman",static + "Diffie-Hellman.pdf")
 
@@ -84,6 +85,7 @@ def fall2018schedule():
     d.assignment("Homework #5",term + 'homework/homework5')
     
     d = s.day("October 4")
+    d.reading("Chapter 4.3")
     d.lecture("RSA")
     d.slide("RSA",static + "RSA.pdf")
     
@@ -96,6 +98,7 @@ def fall2018schedule():
     d.lecture("No class -- office hours")    
     
     d = s.day("October 11")
+    d.reading("Chapter 4.6 - 4.8")
     d.lecture("Public Key Infrastructure and Certificates")
     d.slide("PKI",static + "PKI.pdf")
     d.assignment("Homework #6",term + 'homework/homework6')
@@ -137,6 +140,7 @@ def fall2018schedule():
 
     d = s.day("October 30")
     d.lecture("TLS")
+    d.reading("Chapter 10.3")
     d.slide("TLS Research",static + "TLSResearch.pdf")
     d.assignment("Homework #8",term + 'homework/homework8')
     
@@ -150,28 +154,41 @@ def fall2018schedule():
 
     d = s.day("November 6")
     d.lecture("Passwords")
-    d.assignment("Homework #9", term + 'homework/homework9')
+    d.reading("Chapter 7.3")
+    d.slide("Passwords",static + "Passwords.pdf")
+    d.reading("Easy Ways to Build a Better P@$5w0rd (NIST)", "https://www.nist.gov/blogs/taking-measure/easy-ways-build-better-p5w0rd")
+    d.reading("How to Devise Passwords That Drive Hackers Away","https://www.nytimes.com/2012/11/08/technology/personaltech/how-to-devise-passwords-that-drive-hackers-away.html")
+    
     
     d = s.day("November 8")
-    d.lecture("Authentication")
+    d.assignment("Homework #9", term + 'homework/homework9')
+    d.lecture("Passwords")
+    d.reading("An Administrator's Guide to Password Research","https://www.microsoft.com/en-us/research/publication/an-administrators-guide-to-internet-password-research/")
+    d.reading("The Quest to Replace Passwords: A Framework for Comparative Evaluation of Web Authentication Schemes","https://ieeexplore.ieee.org/document/6234436")
 
-    d = s.day("November 9")
-    d.assignment("Project #7: Password Cracking")
+    d = s.day("November 10")
+    d.assignment("Project #7: Password Cracking", term + 'projects/project7')
 
     s.week()
 
     d = s.day("November 13")
-    d.lecture("Software Exploits")
-    d.assignment("Homework #10")
+    d.lecture("Buffer Overflow")
+    d.slide("Buffer Overflow",static + "BufferOverflow.pdf")
+    d.reading("Chapter 11.2")
+    d.reading("Smashing the Stack For Fun and Profit","http://www.phrack.org/issues/49/14.html#article")
+    d.reading("Smashing the Stack For Fun and Profit (Today)","https://travisf.net/smashing-the-stack-today")
+    d.reading("Smashing the Stack in 2011","https://paulmakowski.wordpress.com/2011/01/25/smashing-the-stack-in-2011/")
+    d.reading("Smashing the Modern Stack for Fun and Profit","https://www.ethicalhacker.net/columns/heffner/smashing-the-modern-stack-for-fun-and-profit/")
     
     d = s.day("November 15")
-    d.lecture("Stack Smashing")
+    d.lecture("Buffer Overflow")
+    d.assignment("Homework #10", term + 'homework/homework10')
 
     s.week()
     
     d = s.day("November 20")
     d.lecture("No Class -- Friday Instruction")
-    d.assignment("Project #8: Buffer Overflow")
+    d.assignment("Project #8: Buffer Overflow", term + 'projects/project8')
     
     d = s.day("November 22")
     d.lecture("Thanksgiving Holiday")
@@ -179,23 +196,26 @@ def fall2018schedule():
     s.week()
 
     d = s.day("November 27")
-    d.lecture("Software Expoits")
-    d.assignment("Homework #11")
+    d.lecture("Secure Email")
+    d.assignment("Homework #11",term + 'homework/homework11')
     
     d = s.day("November 29")
-    d.lecture("Software Expoits")
+    d.lecture("Exam Review")
 
     d = s.day("November 30")
-    d.assignment("Project #9: Extracting Secrets")
+    d.assignment("Project #9: Extracting Secrets", term + 'projects/project9')
 
     s.week()
 
     d = s.day("December 4")
-    d.lecture("Secure Email")
+    d.lecture("No Class")
     d.assignment("Homework #12")
     
-    d = s.day("December 6")
-    d.assignment("Exam #2")    
+    d = s.day("December 5")
+    d.assignment("Exam #2 first day in testing center")
+
+    d = s.day("December 8")
+    d.assignment("Exam #2 last day in testing center (ends at 3pm)")
 
     s.week()
 
