@@ -197,6 +197,7 @@ def fall2018schedule():
 
     d = s.day("November 27")
     d.lecture("Secure Email")
+    d.slide("Secure Email",static + "SecureEmail.pdf")
     d.assignment("Homework #11",term + 'homework/homework11')
     
     d = s.day("November 29")
@@ -209,7 +210,7 @@ def fall2018schedule():
 
     d = s.day("December 4")
     d.lecture("No Class")
-    d.assignment("Homework #12")
+    d.assignment("Homework #12", term + 'homework/homework12')
     
     d = s.day("December 5")
     d.assignment("Exam #2 first day in testing center")
@@ -221,11 +222,13 @@ def fall2018schedule():
 
     d = s.day("December 11")
     d.lecture("Social Engineering")
-    d.assignment("Project #10: PGP and S/MIME")
+    d.assignment("Project #10: PGP and S/MIME", term + 'projects/project10')
+    d.slide("Demystifying the Secure Enclave Processor","https://www.youtube.com/watch?v=7UNeUT_sRos")
     
     d = s.day("December 13")
-    d.lecture("TBD")
-    d.assignment("Project #11: Extra Credit")
+    d.lecture("Signal")
+    d.slide("Signal",static + "Signal.pdf")
+    d.assignment("Project #11: Extra Credit", term + 'projects/project11')
 
     
     return render_template('fall-2018/schedule.html',active='schedule', weeks=s.weeks)
