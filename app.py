@@ -1,6 +1,7 @@
 import sys
 
 from views import fall2018
+from views import winter2019
 
 from flask import Flask, render_template
 from flask_frozen import Freezer
