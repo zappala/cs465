@@ -2,12 +2,20 @@ from flask import render_template
 
 from config import app
 from .schedule import *
+import os
+
+static = '/static/lectures/w19/'
+pubs = '/static/pubs/'
+term = '/winter-2019/'
+
+@app.route('/winter-2019/lectures')
+def lectures():
+    lecs = os.listdir(static[1:])
+    return render_template(term + 'lectures.html', files=lecs, base=static )
+
 
 @app.route('/winter-2019/schedule')
 def fall2019schedule():
-    static = '/static/lectures/w19/'
-    pubs = '/static/pubs/'
-    term = '/winter-2019/'
     s = Schedule()
 
     s.week()

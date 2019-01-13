@@ -1,0 +1,48 @@
+{% extends "winter-2019/menu.html" %}
+
+
+{% block page %}
+
+{#
+    {% for lec in files %}
+    <div class="lecv"> <A href="{{base}}/{{lec}}">{{lec}}</A> </div>
+    {% endfor %}
+    #}
+
+{% filter markdown %}
+#Lectures and other Resources
+
+##Course Introduction
+* [Course Introduction]({{base}}/Introduction.pdf)
+* [Terminology]({{base}}/Terminology.pdf)
+
+##Applied Cryptography
+
+###Introduction to Cryptography [Lecture Slides - Cryptography into]({{base}}/Cryptography.pdf)
+* [History of Cryptography](http://en.wikipedia.org/wiki/History_of_cryptography)
+
+###AES [Lecture Slides]({{base}}/AES.pdf)
+* [FIPS197]({{base}}../../pubs/fips-197.pdf)
+* [AES on Wikipedia](http://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
+* [AES Flash Demo](http://students.cs.byu.edu/~cs465ta/lectures/rijndael_ingles2004.swf)  (Try watching in Firefox... Chrome hates flash)
+* [Stick Figure Guide to AES]( http://www.moserware.com/2009/09/stick-figure-guide-to-advanced.html) and [PDF version](http://www.moserware.com/assets/stick-figure-guide-to-advanced/A%20Stick%20Figure%20Guide%20to%20the%20Advanced%20Encryption%20Standard%20%28AES%29.pdf)
+* [Finite Field Multiply Examples](http://docs.google.com/presentation/d/13vkvFGAOcujmaiWLPLdw0gdQE-5psRy2x2pbb98kXHk)
+
+###Block Cipher Modes [Lecture Slides]({{base}}/BlockCipherModes.pdf)
+* [Wikipedia on Block Cipher Modes](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
+* [Padding](http://www.di-mgt.com.au/cryptopad.html)
+* [How to Choose an Authenticated Encryption Mode](https://blog.cryptographyengineering.com/2012/05/19/how-to-choose-authenticated-encryption/)
+* [The Galois/Counter Mode of Operation (GCM)](http://luca-giuzzi.unibs.it/corsi/Support/papers-cryptography/gcm-spec.pdf)
+
+###Cryptographic Hash Functions
+*comning soon
+ 
+
+
+  
+
+
+
+{% endfilter %}
+
+{% endblock %}
