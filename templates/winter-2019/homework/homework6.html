@@ -1,4 +1,4 @@
-{% extends "fall-2018/menu.html" %}
+{% extends "winter-2019/menu.html" %}
 
 {% block page %}
 
@@ -6,26 +6,30 @@
 
 # Homework #6
 
-Locate an AES encryption library for a programming language of your
-choice.
 
-Write a short program to encrypt and decrypt the following
-file. Determine how to specify the mode and padding.
+##MAC then Encrypt? or Encrypt then MAC?
 
-[plaintext.txt](/static/files/plaintext.txt)
+Read
 
-Submit the following, typeset it so that it is readable:
+https://moxie.org/blog/the-cryptographic-doom-principle/
 
-* Description of the AES library you used and a URL
+Alternate link:
+https://web.archive.org/web/20180119113144/https://moxie.org/blog/the-cryptographic-doom-principle
 
-* Source code snippets showing how to encrypt/decrypt using the library
+and refer to these as needed:
 
-* Hex output of ciphertext in at least two modes (e.g., ECB and CBC)
+* http://world.std.com/~dtd/sign_encrypt/sign_encrypt7.html
+* http://crypto.stackexchange.com/questions/5458/should-we-sign-then-encrypt-or-encrypt-then-sign
+* http://crypto.stackexchange.com/questions/202/should-we-mac-then-encrypt-or-encrypt-then-mac
 
-* Lessons learned - list of 2-5 items about your experience
+Write a few paragraphs - no more than 2 pages, describing the issue at a level suitable for a non-crypto, but technical reader. (Your future boss? Grant funder?) Describe the issues, which order you would recommend doing in some system you were designing that needed both message authentication and encryption. Discuss Pros and Cons.
 
-Submit your work on Learning Suite as a PDF before the start of class
-on the due date.
+Write this to persuade someone to take your recommendation. 
+
+
+## Submit
+
+Submit a PDF on Learning Suite.
 
 {% endfilter %}
 

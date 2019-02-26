@@ -23,13 +23,11 @@ def fall2019schedule():
     d = s.day("January 8")
 
     d.lecture("Cryptography")
-#    d.reading("Chapter 1")
     d.slide("Introduction",static + 'Introduction.pdf')
     d.slide("Terminology",static + 'Terminology.pdf')
     d.assignment("Homework #1",term + 'homework/homework1')
     
     d = s.day("January 10")
-#    d.reading("Chapter 2")
     d.slide("Cryptography",static + 'Cryptography.pdf')
     d.slide("AES",static + 'AES.pdf')
     d.lecture("Cryptography")
@@ -38,7 +36,6 @@ def fall2019schedule():
 
     d = s.day("January 15")
     d.lecture("AES")
-#    d.reading("Chapter 3.1 - 3.3.4")
     d.slide("AES",static + 'AES.pdf')
 
     d = s.day("January 16")
@@ -47,7 +44,6 @@ def fall2019schedule():
     d = s.day("January 17")
     d.lecture("Block Cipher Modes, Authenticated Encryption Modes, and Padding")
     d.slide("Block Cipher Modes",static + 'BlockCipherModes.pdf')
-#    d.reading("Chapter 3.1 - 3.3.7")
     d.reading("How to Choose an Authenticated Encryption Mode (optional)", "https://blog.cryptographyengineering.com/2012/05/19/how-to-choose-authenticated-encryption/")
     d.reading("The Galois/Counter Mode of Operation (GCM) (optional)","http://luca-giuzzi.unibs.it/corsi/Support/papers-cryptography/gcm-spec.pdf")
 
@@ -81,6 +77,9 @@ def fall2019schedule():
 
     d = s.day("January 29")
     d.lecture("Public-Key Crypto Intro + Math overview  (discuss Hash Attack)")
+    d.slide("Class Slides for Hash Attack Discussion","https://docs.google.com/presentation/d/1i2TvaLXZjWtZubOm-7sNVrbmnNg3ji1fQ9XmaWzE_n8/edit?usp=sharing")
+    d.slide("Class Slides for MAC Attack Discussion","https://docs.google.com/presentation/d/19HfSDfiPJxaC-snRp-C2gw466UzeYlOtPEpeh2679CE/edit?usp=sharing")
+    d.slide("Publick-key Intro / Math Intro / Diffie-Hellman",static + "Diffie-Hellman.pdf")
     d.assignment("Homework #4",term + 'homework/homework4')
 
     d = s.day("January 31")
@@ -96,6 +95,7 @@ def fall2019schedule():
     
     d = s.day("February 5")
     d.lecture("RSA Part 1")
+    d.slide("RSA",static + "RSA.pdf")
     d.assignment("Homework #5",term + 'homework/homework5')
 
     d = s.day("February 7")
@@ -111,7 +111,7 @@ def fall2019schedule():
     d = s.day("February 12")
     d.lecture("Digital Certificates and Signatures")
     d.slide("PKI",static + "PKI.pdf")
-    d.assignment("(TBD May Change) Homework #6",term + 'homework/homework6')
+    d.assignment("Homework #6",term + 'homework/homework6')
     
     d = s.day("February 14")
     d.lecture("Public Key Infrastructure ")
@@ -145,6 +145,7 @@ def fall2019schedule():
     d = s.day("February 26")
     d.assignment("None", None)
     d.lecture("In Class Review for Exam 1")
+    d.reading("Midterm 1 study guide","https://docs.google.com/document/d/1tUISx0gQz1OkKihHag4WBzRKlo5hgIB_-ApwGypFmJg/edit?usp=sharing")
     
     d = s.day("February 27")
     d.assignment("None", None)
@@ -153,48 +154,34 @@ def fall2019schedule():
     d = s.day("February 28")
     d.assignment("No Class. Take your Midterm.")
 
+    d = s.day("Feb 29")
+    d.assignment("Read March 5 Readings over the weekend")
+
     s.week()
 
     d = s.day("March 5")
-    d.lecture("TLS part 2")    
+    d.lecture("TLS part 1.5/2")    
     d.slide("TLS",static + "TLS.pdf")
     d.reading("The First Few Milliseconds of an HTTPS Connection","http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html")
     d.reading("The Illustrated TLS Connection","https://tls.ulfheim.net/")
-#    d.reading("Chapter 4.6 - 4.8")
-    d.assignment("MAC then Encrypt/Encrypt then MAC -- TBD", None)
+    d.assignment("Homework #8", term + 'homework/homework8')
 
 
     d = s.day("March 7")
-    d.lecture("Coming Soon - the rest of the semester")
-#
-#    d = s.day("October 16")
-#    d.lecture("Exam Review")
-#    d.assignment("Homework #7",term + 'homework/homework7')
-#    d.reading("Midterm 1 Study Guide","help/study-guide-midterm1")
-#
-#    d = s.day("October 17")
-#    d.assignment("Exam #1 first day in the testing center")
-#
-#    d = s.day("October 18")
-#    d.lecture("No Class")
-#
-#    d = s.day("October 20")
-#    d.assignment("Exam #1 last day in the testing center")
-#
-#    s.week()
-#
-#    d = s.day("October 23")
-#    d.lecture("TLS")
-#    
-#    d = s.day("October 25")
-#    d.lecture("TLS, Project #5 Discussion")
-#
-#    d = s.day("October 27")
-#
-#    s.week()
-#
-#    d = s.day("October 30")
-#    d.lecture("TLS")
+    d.lecture("Passwords")
+    d.slide("Passwords", static + "Passwords.pdf")
+    d.reading("Easy Ways to Build a Better P@$5w0rd (NIST)", "https://www.nist.gov/blogs/taking-measure/easy-ways-build-better-p5w0rd")
+    d.reading("How to Devise Passwords That Drive Hackers Away","https://www.nytimes.com/2012/11/08/technology/personaltech/how-to-devise-passwords-that-drive-hackers-away.html")
+
+
+    d = s.day("March 8")
+    d.assignment("Project #6: TLS", term + 'projects/project6')
+
+
+    s.week()
+    d=s.day("March 13")
+    d.lecture("Coming Soon")
+
 #    d.reading("Chapter 10.3")
 #    d.slide("TLS Research",static + "TLSResearch.pdf")
 #    d.assignment("Homework #8",term + 'homework/homework8')
@@ -202,17 +189,9 @@ def fall2019schedule():
 #    d = s.day("November 1")
 #    d.lecture("Exam Review")
 #
-#    d = s.day("November 2")
-#    d.assignment("Project #6: TLS", term + 'projects/project6')
-#
-#    s.week()
 #
 #    d = s.day("November 6")
-#    d.lecture("Passwords")
 #    d.reading("Chapter 7.3")
-#    d.slide("Passwords",static + "Passwords.pdf")
-#    d.reading("Easy Ways to Build a Better P@$5w0rd (NIST)", "https://www.nist.gov/blogs/taking-measure/easy-ways-build-better-p5w0rd")
-#    d.reading("How to Devise Passwords That Drive Hackers Away","https://www.nytimes.com/2012/11/08/technology/personaltech/how-to-devise-passwords-that-drive-hackers-away.html")
 #    
 #    
 #    d = s.day("November 8")
