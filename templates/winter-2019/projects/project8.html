@@ -52,19 +52,21 @@ attack. Turn off stack randomization before continuing.
 
 ## Compiler Flags 
 
+It is recommended you use the supplied binaries but if you need/want to recompile, use the following compiler flags.
+
 Compiler options must be used to turn off buffer overflow defenses.
 
 Use the following form of compiler options to compile example C
 programs:
 
 ```
-gcc -g -m32 -fno-stack-protector -z execstack -o [executable file] [source file]
+gcc -g -m32 -fno-pie -fno-stack-protector -z execstack -o [executable file] [source file]
 ```
 
 Here is how you compile the `auth_overflow3.c` program:
 
 ```
-gcc -g -m32 -fno-stack-protector -z execstack -o auth_overflow3 auth_overflow3.c
+gcc -g -m32 -fno-pie -fno-stack-protector -z execstack -o auth_overflow3 auth_overflow3.c
 ```
 ## Section A
 
@@ -72,7 +74,7 @@ Goal: Gain access without a valid password.
 
 1.  Study the `auth_overflow1.c` program and see the valid passwords.
 
-1. Try different passwords to see if you can cause unexpected behavior.
+1. Try different passwords to see if you can cause unexpected behavior (e.g. vary the length - to at least 35 characters).
 
     * gain access without a valid password
     * gain access without a valid password, then program crashes

@@ -168,6 +168,7 @@ def fall2019schedule():
 
 
     d = s.day("March 7")
+    d.lecture("TLS continued")
     d.lecture("Passwords")
     d.slide("Passwords", static + "Passwords.pdf")
     d.reading("Easy Ways to Build a Better P@$5w0rd (NIST)", "https://www.nist.gov/blogs/taking-measure/easy-ways-build-better-p5w0rd")
@@ -179,90 +180,87 @@ def fall2019schedule():
 
 
     s.week()
-    d=s.day("March 13")
-    d.lecture("Coming Soon")
+    d=s.day("March 12")
+    d.lecture("Passwords Continued")
+    d.slide("Passwords", static + "Passwords.pdf")
+    d.assignment("Homework #9",term + 'homework/homework9')
 
-#    d.reading("Chapter 10.3")
-#    d.slide("TLS Research",static + "TLSResearch.pdf")
-#    d.assignment("Homework #8",term + 'homework/homework8')
-#    
-#    d = s.day("November 1")
-#    d.lecture("Exam Review")
-#
-#
-#    d = s.day("November 6")
-#    d.reading("Chapter 7.3")
-#    
-#    
-#    d = s.day("November 8")
-#    d.assignment("Homework #9", term + 'homework/homework9')
-#    d.lecture("Passwords")
-#    d.reading("An Administrator's Guide to Password Research","https://www.microsoft.com/en-us/research/publication/an-administrators-guide-to-internet-password-research/")
-#    d.reading("The Quest to Replace Passwords: A Framework for Comparative Evaluation of Web Authentication Schemes","https://ieeexplore.ieee.org/document/6234436")
-#
-#    d = s.day("November 10")
-#    d.assignment("Project #7: Password Cracking", term + 'projects/project7')
-#
-#    s.week()
-#
-#    d = s.day("November 13")
-#    d.lecture("Buffer Overflow")
-#    d.slide("Buffer Overflow",static + "BufferOverflow.pdf")
-#    d.reading("Chapter 11.2")
-#    d.reading("Smashing the Stack For Fun and Profit","http://www.phrack.org/issues/49/14.html#article")
-#    d.reading("Smashing the Stack For Fun and Profit (Today)","https://travisf.net/smashing-the-stack-today")
-#    d.reading("Smashing the Stack in 2011","https://paulmakowski.wordpress.com/2011/01/25/smashing-the-stack-in-2011/")
-#    d.reading("Smashing the Modern Stack for Fun and Profit","https://www.ethicalhacker.net/columns/heffner/smashing-the-modern-stack-for-fun-and-profit/")
-#    
-#    d = s.day("November 15")
-#    d.lecture("Buffer Overflow")
-#    d.assignment("Homework #10", term + 'homework/homework10')
-#
-#    s.week()
-#    
-#    d = s.day("November 20")
-#    d.lecture("No Class -- Friday Instruction")
-#    d.assignment("Project #8: Buffer Overflow", term + 'projects/project8')
-#    
-#    d = s.day("November 22")
-#    d.lecture("Thanksgiving Holiday")
-#
-#    s.week()
-#
-#    d = s.day("November 27")
-#    d.lecture("Secure Email")
-#    d.slide("Secure Email",static + "SecureEmail.pdf")
-#    d.assignment("Homework #11",term + 'homework/homework11')
-#    
-#    d = s.day("November 29")
-#    d.lecture("Exam Review")
-#
-#    d = s.day("November 30")
-#    d.assignment("Project #9: Extracting Secrets", term + 'projects/project9')
-#
-#    s.week()
-#
-#    d = s.day("December 4")
-#    d.lecture("No Class")
-#    d.assignment("Homework #12", term + 'homework/homework12')
-#    
-#    d = s.day("December 5")
-#    d.assignment("Exam #2 first day in testing center")
-#
-#    d = s.day("December 8")
-#    d.assignment("Exam #2 last day in testing center (ends at 3pm)")
-#
-#    s.week()
-#
-#    d = s.day("December 11")
-#    d.lecture("Social Engineering")
-#    d.assignment("Project #10: PGP and S/MIME", term + 'projects/project10')
-#    d.slide("Demystifying the Secure Enclave Processor","https://www.youtube.com/watch?v=7UNeUT_sRos")
-#    
-#    d = s.day("December 13")
-#    d.lecture("Signal")
-#    d.slide("Signal",static + "Signal.pdf")
-#    d.assignment("Project #11: Extra Credit", term + 'projects/project11')
-#
+    d=s.day("March 14")
+
+
+    d = s.day("March 15")
+    d.lecture("Beyond Passwords and Authentication")
+    d.slide("Multi-factor authentication and password vaults", "https://docs.google.com/presentation/d/1eqFB1IklngE5x2iEVxkU2q9cV-eFH7JJPF7TK9AE0BM/edit?usp=sharing")
+    d.assignment("Project #7: Password Cracking", term + 'projects/project7')
+
+    s.week()
+    d = s.day("March 19")
+    d.lecture("Buffer Overflow")
+    d.reading("Smashing the Stack For Fun and Profit","http://www.phrack.org/issues/49/14.html#article")
+    d.slide("Buffer Overflow",static + "BufferOverflow.pdf")
+    d.reading("Smashing the Stack For Fun and Profit (Today)","https://travisf.net/smashing-the-stack-today")
+    d.reading("Smashing the Stack in 2011","https://paulmakowski.wordpress.com/2011/01/25/smashing-the-stack-in-2011/")
+    d.reading("Smashing the Modern Stack for Fun and Profit","https://www.ethicalhacker.net/columns/heffner/smashing-the-modern-stack-for-fun-and-profit/")
+    
+    d = s.day("March 20")
+    d.assignment("Homework #10", term + 'homework/homework10')
+
+    d = s.day("March 21")
+    d.lecture("Buffer Overflow")
+    d.slide("Buffer Overflow",static + "BufferOverflow.pdf")
+
+    d = s.day("March 22")
+    d.assignment("Project #9: Extracting Secrets", term + 'projects/project9')
+    s.week()
+
+
+
+    d = s.day("March 26")
+    d.assignment("Homework #11",term + 'homework/homework11')
+    d.lecture("Buffer Overflow")
+    d.slide("Buffer Overflow",static + "BufferOverflow.pdf")
+    
+    d = s.day("March 28")
+    d.lecture("Secure Email")
+    d.slide("Secure Email",static + "SecureEmail.pdf")
+
+    d = s.day("March 29")
+    d.assignment("Project #8: Buffer Overflow", term + 'projects/project8')
+
+    s.week()
+    d = s.day("April 2")
+    d.lecture("Secure Email part 2")
+    d.slide("Secure Email",static + "SecureEmail.pdf")
+    d.assignment("Homework #12", term + 'homework/homework12')
+
+
+    d = s.day("April 4")
+    d.lecture("Integer Manipulation Vulnerabilities")
+    d.slide("Microsoft Whitepaper", "https://bit.ly/2I9nKPW")
+    d.slide("Exam Review", "https://docs.google.com/document/d/1suND4Z-r1uDvHMj8fSCWAyScR_1gjavcNu8SFtjPcCQ/edit?usp=sharing")
+
+    d = s.day("April 5")
+    d.assignment("Project #10: Secure Email", term + 'projects/project10')
+
+    s.week()
+
+    d = s.day("April 9")
+    d.lecture("In class Mid-Term Test (#2)")
+    
+    d = s.day("April 11")
+    d.lecture("Social Engineering")
+    d.slide("Social Engineering", static + "social_engineering.pdf")
+    
+
+    s.week()
+
+    d = s.day("April 16")
+    d.lecture("Exam Return (MT2) and Exam Review (Final), and if we have time, Signal")
+    d.slide("Signal",static + "Signal.pdf")
+
+    d = s.day("April 17")
+    d.assignment("Project #11: Extra Credit", term + 'projects/project11')
+    d.assignment("Homework #13: Extra Credit", term + 'homework/homework13')
+
     
     return render_template('winter-2019/schedule.html',active='schedule', weeks=s.weeks)
