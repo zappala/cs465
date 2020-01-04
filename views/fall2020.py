@@ -200,8 +200,9 @@ def fall2020schedule():
     d.slide("Buffer Overflow",static + "BufferOverflow.pdf")
 
     d = s.day("Nov 12")
-    d.lecture("TBD - check back later")
-    #d.slide("Secure Email",static + "SecureEmail.pdf")
+    d.lecture("Mid-Term Exam 2 review, Intro to secure email")
+    d.reading("Midterm Exam 2 study guide","https://docs.google.com/document/d/1suND4Z-r1uDvHMj8fSCWAyScR_1gjavcNu8SFtjPcCQ/edit#")
+    d.slide("Secure Email",static + "SecureEmail.pdf")
 
     d = s.day("Nov 13")
     d.assignment("Project #9: Buffer Overflow", term + 'projects/project9')
@@ -211,10 +212,7 @@ def fall2020schedule():
 
 
     d = s.day("Nov 17")
-    d.lecture("In Class Review for Midterm Exam 2")
-    d.reading("Midterm Exam 2 study guide","https://docs.google.com/document/d/1tUISx0gQz1OkKihHag4WBzRKlo5hgIB_-ApwGypFmJg/edit?usp=sharing")
-
-
+    d.lecture("Class Canceled.  Write a letter to a Missionary today.")
 
     
     d = s.day("Nov 19")
