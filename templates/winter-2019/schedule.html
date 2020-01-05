@@ -1,0 +1,47 @@
+{% extends "winter-2019/menu.html" %}
+
+{% block page %}
+
+<h1>Schedule</h1>
+
+<p>This schedule is <u>subject to change</u>. Assignments may be changed
+up until the day they are assigned.</p>
+
+{% for week in weeks %}
+<h2 class="plain">Week {{ week.number }}</h2>
+
+{% for day in week.days %}
+<div class="schedule">
+
+  <div class="day">{{ day.date }}</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    {% if day.section %}
+      <span class="section">{{ day.section }}</span> {% if day.topic %} | <span class="topic">{{ day.topic }}</span>{% endif %}
+      <ul>
+	  {% for reading in day.readings %}
+	  <li>{{ reading|safe }}</li>
+	  {% endfor %}
+	  {% for slide in day.slides %}
+	  <li>{{ slide|safe }}</li>
+	  {% endfor %}
+      </ul>
+    {% endif %}
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    {% for assignment in day.assignments %}
+    <li>{{ assignment|safe }}</li>
+    {% endfor %}
+    </ul>
+    </div>
+  </div>
+</div>
+	
+{% endfor %}
+
+{% endfor %}
+
+{% endblock %}
