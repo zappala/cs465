@@ -15,7 +15,7 @@ def lectures():
 
 
 @app.route('/winter-2019/schedule')
-def fall2019schedule():
+def winter2019schedule():
     s = Schedule()
 
     s.week()

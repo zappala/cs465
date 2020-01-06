@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 
 {% block term %}
-Winter 2019
+Fall 2019
 {% endblock %}
 
 {% block section %}
-Section 1: TTh 3:00pm - 4:15pm 2113 JKB
+Section 1: MWF 9:00am, 2113 JKB
+<br>
+<a class="btn btn-primary" href="https://piazza.com/byu/fall2019/cs465">Discuss and get help on Piazza</a>
 {% endblock %}
 
 
-{% set term = 'winter-2019' %}
+{% set term = 'fall-2019' %}
 
 {% macro render(directory,page,name) -%}
 {% set path = term %}
@@ -21,7 +23,7 @@ Section 1: TTh 3:00pm - 4:15pm 2113 JKB
 {% set target = 'index' %}
 {% endif %}
 <li class="nav-item {% if active == target %}active{% endif %}">
-<a class="nav-link" href={{url_for("show",directory=path, page=page)}} >{{name}}</a>
+  <a class="nav-link" href={{url_for("show",directory=path, page=page)}}>{{name}}</a>
 </li>
 {%- endmacro %}
 
@@ -34,14 +36,13 @@ Section 1: TTh 3:00pm - 4:15pm 2113 JKB
 {% if page == '' %}
 {% set target = 'index' %}
 {% endif %}
-<a class="dropdown-item" href={{url_for("show",directory=path, page=page)}} >{{name}}</a>
+<a class="dropdown-item" href={{url_for("show",directory=path, page=page)}}>{{name}}</a>
 {%- endmacro %}
 
 {% block menu %}
 
 {{ render('','','Syllabus') }}
 {{ render('','schedule','Schedule') }}
-{{ render('','lectures','Lecture Material') }}
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="/homework" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Homework</a>
@@ -58,7 +59,7 @@ Section 1: TTh 3:00pm - 4:15pm 2113 JKB
     {{ dropdown('','homework/homework10','Homework #10') }}
     {{ dropdown('','homework/homework11','Homework #11') }}
     {{ dropdown('','homework/homework12','Homework #12') }}
-</div>
+  </div>
 </li>
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -75,7 +76,7 @@ Section 1: TTh 3:00pm - 4:15pm 2113 JKB
     {{ dropdown('','projects/project9','Project #9: Extracting Secrets') }}
     {{ dropdown('','projects/project10','Project #10: S/MIME and PGP') }}
     {{ dropdown('','projects/project11','Project #11: Bombs Extra Credit') }}
-</div>
+  </div>
 </li>
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -85,9 +86,10 @@ Section 1: TTh 3:00pm - 4:15pm 2113 JKB
     {{ dropdown('help','officehours','Office Hours') }}
     {{ dropdown('help','study-guide-midterm1','Midterm 1 Study Guide') }}
     {{ dropdown('help','study-guide-midterm2','Midterm 2 Study Guide') }}
-    {{ dropdown('help','slack','Class Slack Channel') }}
-    </div>
-    </li>
+    <a class="dropdown-item" href="https://piazza.com/byu/fall2019/cs465" target="_blank">Discussion <i class="fi-arrow-right"></i></a>
+</li>
+</div>
+</li>
 </ul>
 
 {% endblock %}
