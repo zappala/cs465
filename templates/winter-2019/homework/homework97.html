@@ -1,0 +1,32 @@
+{% extends "winter-2019/menu.html" %}
+
+{% block page %}
+
+{% filter markdown %}
+
+# Homework #6
+
+Locate an AES encryption library for a programming language of your
+choice.
+
+Write a short program to encrypt and decrypt the following
+file. Determine how to specify the mode and padding.
+
+[plaintext.txt](/static/files/plaintext.txt)
+
+Submit the following, typeset it so that it is readable:
+
+* Description of the AES library you used and a URL
+
+* Source code snippets showing how to encrypt/decrypt using the library
+
+* Hex output of ciphertext in at least two modes (e.g., ECB and CBC)
+
+* Lessons learned - list of 2-5 items about your experience
+
+Submit your work on Learning Suite as a PDF before the start of class
+on the due date.
+
+{% endfilter %}
+
+{% endblock %}
