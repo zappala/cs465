@@ -1,0 +1,36 @@
+{% extends "winter-2020/menu.html" %}
+
+{% block page %}
+
+{% filter markdown %}
+
+# Homework #6
+
+
+##MAC then Encrypt? or Encrypt then MAC?
+
+Read
+
+https://moxie.org/blog/the-cryptographic-doom-principle/
+
+Alternate link:
+https://web.archive.org/web/20180119113144/https://moxie.org/blog/the-cryptographic-doom-principle
+
+and refer to these as needed:
+
+* http://world.std.com/~dtd/sign_encrypt/sign_encrypt7.html
+* http://crypto.stackexchange.com/questions/5458/should-we-sign-then-encrypt-or-encrypt-then-sign
+* http://crypto.stackexchange.com/questions/202/should-we-mac-then-encrypt-or-encrypt-then-mac
+
+Write a few paragraphs - no more than 2 pages, describing the issue at a level suitable for a non-crypto, but technical reader. (Your future boss? Grant funder?) Describe the issues, which order you would recommend doing in some system you were designing that needed both message authentication and encryption. Discuss Pros and Cons.
+
+Write this to persuade someone to take your recommendation. 
+
+
+## Submit
+
+Submit a PDF on Learning Suite.
+
+{% endfilter %}
+
+{% endblock %}
