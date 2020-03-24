@@ -201,7 +201,8 @@ def winter2020schedule():
     d.slide("Buffer Overflow",static + "BufferOverflow.pdf")
 
     d = s.day("March 20")
-    d.assignment("Project #9: Extracting Secrets", term + 'projects/project9')
+    #d.assignment("Project #9: Extracting Secrets", term + 'projects/project9')
+    d.assignment("postponed til nextweek: Project #9: Extracting Secrets", term + 'projects/project9')
     s.week()
 
 
@@ -212,46 +213,57 @@ def winter2020schedule():
     d.slide("Buffer Overflow",static + "BufferOverflow.pdf")
     
     d = s.day("March 26")
-    d.lecture("Secure Email")
-    d.slide("Secure Email",static + "SecureEmail.pdf")
+    d.lecture("Buffer Overflow")
+    d.slide("Buffer Overflow",static + "BufferOverflow.pdf")
+    #d.lecture("Secure Email")
+    #d.slide("Secure Email",static + "SecureEmail.pdf")
 
     d = s.day("March 27")
-    d.assignment("Project #8: Buffer Overflow", term + 'projects/project8')
+    d.assignment("Project #9: Extracting Secrets", term + 'projects/project9')
+    #d.assignment("Project #8: Buffer Overflow", term + 'projects/project8')
 
     s.week()
     d = s.day("March 31")
-    d.lecture("Secure Email part 2")
+    d.lecture("Secure Email")
     d.slide("Secure Email",static + "SecureEmail.pdf")
     d.assignment("Homework #12", term + 'homework/homework12')
 
 
     d = s.day("April 2")
+    d.lecture("Secure Email part 2")
+    d.slide("Secure Email",static + "SecureEmail.pdf")
     d.lecture("Integer Manipulation Vulnerabilities")
     d.slide("Microsoft Whitepaper", "https://bit.ly/2I9nKPW")
-    d.slide("Exam Review", "https://docs.google.com/document/d/1suND4Z-r1uDvHMj8fSCWAyScR_1gjavcNu8SFtjPcCQ/edit?usp=sharing")
+    #d.slide("Exam Review", "https://docs.google.com/document/d/1suND4Z-r1uDvHMj8fSCWAyScR_1gjavcNu8SFtjPcCQ/edit?usp=sharing")
 
     d = s.day("April 3")
-    d.assignment("Project #10: Secure Email", term + 'projects/project10')
+    d.assignment("Project #8: Buffer Overflow", term + 'projects/project8')
 
     s.week()
 
 
+    d = s.day("April 7")
+    d.lecture("Social Engineering + Midterm exam #2 Review")
+    d.slide("Social Engineering", static + "social_engineering.pdf")
+
+    
     d = s.day("April 9")
-    d.lecture("TENNATIVE - schedule for rest of semester not yet arranged = possibly - In class Mid-Term Test (#2)")
-#    
-#    d = s.day("April 11")
-#    d.lecture("Social Engineering")
-#    d.slide("Social Engineering", static + "social_engineering.pdf")
-#    
-#
-#    s.week()
+    d.lecture("Midterm Exam #2 - TBD")
+    d.assignment("Project #10: Secure Email", term + 'projects/project10')
+
+    s.week()
+    d = s.day("April 14")
+    d.lecture("Midterm exam #2 discussion, Review for Final, Course overview.")
+
+    d = s.day("April 15")
+    d.assignment("Project #11: Extra Credit - last day for submission", term + 'projects/project11')
+
 #
 #    d = s.day("April 16")
 #    d.lecture("Exam Return (MT2) and Exam Review (Final), and if we have time, Signal")
 #    d.slide("Signal",static + "Signal.pdf")
 #
 #    d = s.day("April 17")
-#    d.assignment("Project #11: Extra Credit", term + 'projects/project11')
 #    d.assignment("Homework #13: Extra Credit", term + 'homework/homework13')
 #
 #    
