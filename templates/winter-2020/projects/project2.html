@@ -43,13 +43,15 @@ number of bits.
 2. Using this wrapper, conduct a series of collision and preimage
 attacks at different bit sizes.
     * You should test at least 4 different bit sizes between the range
-      8 to 32. Choose reasonable values for bit sizes (e.g., 8, 16, 20,
+      8 to 32. Choose reasonable values for bit sizes (e.g., 8, 10, 16, 20,
       24). You should have at most 2 trials at bit sizes between 8-15.
+
+    * You should be include data for non-multiple-of-8 bitsizes.
 
     * Don't attempt attacks against bit sizes that take you hours to
       complete. Be reasonable.
 
-    * Keep track of the number of attempts it took for the
+    * Keep track of the number of attempts (hashes) it took for the
       attack to be successful. Do not track wall-clock time.
 
     * You should gather at least 50 samples at each bit size.
@@ -70,6 +72,9 @@ given size.
     * Recommendation: Use a logarithmic scale graph.
 
     * Recommendation: Plot theoretical cost vs experimental results
+
+    * Target Audience:  Technical people who do not know about this 
+      specific property of hashes and hash attacks
 
 1. Have another person review your report and give you feedback on the
 clarity of the writing and results. Include the name of your reviewer
@@ -126,7 +131,7 @@ their results.
 
 ## Grading Rubric:
 
-* 20 points for report describing your experiment
+* 20 points for report describing your experiment - think: reproducability
 
 * 10 points will be awarded based on the quality of the writeup that
 explains your experimental design
@@ -135,7 +140,7 @@ explains your experimental design
 data
 
 * 5 points if results are consistent with the theory or include an
-explanation why they might differ from the expected cost
+explanation why they might (mildly) differ from the expected cost
 
 * 5 points for soliciting one external review of your report
 
@@ -146,7 +151,7 @@ file with your source code to Learning Suite.
 
 ## Tips and Hints
 
-* Make sure that you use bit sizes not byte sizes.
+* Make sure that you use BIT sizes not byte sizes.
 
 * If you find results that a drastically different from the
   theoretical values, take a look at your code and look for
