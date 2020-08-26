@@ -199,6 +199,7 @@ def winter2020schedule():
     d = s.day("March 19")
     d.lecture("Buffer Overflow")
     d.slide("Buffer Overflow",static + "BufferOverflow.pdf")
+    d.slide("Stack Frame Layout Simplified", "https://docs.google.com/presentation/d/1FnqqExqirZTQYsI3kN_74OfyiQKBoIsNShXk2ApcNrI/edit#slide=id.p")
 
     d = s.day("March 20")
     #d.assignment("Project #9: Extracting Secrets", term + 'projects/project9')
