@@ -217,7 +217,7 @@ def fall2020schedule():
 
     
     d = s.day("Nov 19")
-    d.lecture("Midterm Exam 2 Live on LearningSuite Oct 19 through Oct 21")
+    d.lecture("Midterm Exam 2 Live on LearningSuite Nov 19 through Nov 21")
     d.assignment("No Class. Take your Midterm.")
 
 
