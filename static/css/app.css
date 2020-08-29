@@ -220,6 +220,14 @@ pre code {
   margin-bottom: 1px;
 }
 
+.tahours {
+  max-width: 90%;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+
 .padded {
   padding: 5px;
   margin-bottom: 1px;
