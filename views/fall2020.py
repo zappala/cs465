@@ -213,7 +213,6 @@ def fall2020schedule():
     d.reading("Midterm Exam 2 study guide","https://docs.google.com/document/d/1tUISx0gQz1OkKihHag4WBzRKlo5hgIB_-ApwGypFmJg/edit?usp=sharing")
 
 
-    d.assignment("Homework #11",term + 'homework/homework11')
 
     
     d = s.day("Nov 19")
