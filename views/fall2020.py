@@ -29,6 +29,7 @@ def fall2020schedule():
     d.assignment("Homework #1",term + 'homework/homework1')
     
     d = s.day("Sept 3")
+    d.assignment("Homework #0",term + 'homework/homework0')
     d.slide("Cryptography",static + 'Cryptography.pdf')
     d.slide("AES",static + 'AES.pdf')
     d.lecture("Cryptography")
