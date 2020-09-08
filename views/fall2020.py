@@ -40,6 +40,7 @@ def fall2020schedule():
     d = s.day("Sept 8")
     d.lecture("AES")
     d.slide("AES",static + 'AES.pdf')
+    d = s.day("Sept 9")
     d.assignment("Homework #2",term + 'homework/homework2')    
 
     d = s.day("Sept 10")
@@ -48,7 +49,7 @@ def fall2020schedule():
     d.reading("How to Choose an Authenticated Encryption Mode (optional)", "https://blog.cryptographyengineering.com/2012/05/19/how-to-choose-authenticated-encryption/")
     d.reading("The Galois/Counter Mode of Operation (GCM) (optional)","http://luca-giuzzi.unibs.it/corsi/Support/papers-cryptography/gcm-spec.pdf")
 
-    d = s.day("Sept 11")
+    d = s.day("Sept 14")
     d.assignment("Project #1: AES",term + 'projects/project1')
 
     #week 3
