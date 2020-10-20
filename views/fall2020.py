@@ -139,13 +139,13 @@ def fall2020schedule():
     d = s.day("Oct 20")
     d.assignment("Homework #7",term + 'homework/homework7')
     d.lecture("TLS Part 1")
-    d.slide("TLS",static + "TLS.pdf")
+    d.slide("TLS",static + "TLS-2020.pdf")
     d.reading("The First Few Milliseconds of an HTTPS Connection","http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html")
     d.reading("The Illustrated TLS Connection","https://tls.ulfheim.net/")
 
     d = s.day("Oct 22")
     d.lecture("TLS part 2")    
-    d.slide("TLS",static + "TLS.pdf")
+    d.slide("TLS",static + "TLS-2020.pdf")
     d.reading("The First Few Milliseconds of an HTTPS Connection","http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html")
     d.reading("The Illustrated TLS Connection","https://tls.ulfheim.net/")
 
