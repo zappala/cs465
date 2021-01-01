@@ -173,6 +173,12 @@ This directory contains homework assignments.
 
 This directory contains project assignments.
 
+## Deploying
 
+When you want to deploy the site, edit `dodo.py` and change the login
+information to use your username. You may be able to do this by
+uncommenting the right line. Then run:
 
-
+```
+pipenv run doit
+```
