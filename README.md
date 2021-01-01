@@ -154,22 +154,22 @@ Inside of this block, you can use HTML, or you can use:
 
 to use Markdown syntax.
 
-## schedule.html
+### schedule.html
 
 This renders the schedule from the `view` you defined. Copy one from a
 previous semester and change the top line indicating the menu it
 extends.
 
-## help
+### help
 
 This directory contains files such as contact info for the instructor
 and office hours.
 
-## homework
+### homework
 
 This directory contains homework assignments.
 
-## projects
+### projects
 
 This directory contains project assignments.
 
