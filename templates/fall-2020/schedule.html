@@ -1,0 +1,47 @@
+{% extends "fall-2020/menu.html" %}
+
+{% block page %}
+
+<h1>Schedule</h1>
+
+<p>This schedule is <u>subject to change</u>. Assignments may be changed
+up until the one week before the due-date. Seriously, don't get too far ahead because the schedule will be adjusted.</p>
+
+{% for week in weeks %}
+<h2 class="plain">Week {{ week.number }}</h2>
+
+{% for day in week.days %}
+<div class="schedule">
+
+  <div class="day">{{ day.date }}</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    {% if day.section %}
+      <span class="section">{{ day.section }}</span> {% if day.topic %} | <span class="topic">{{ day.topic }}</span>{% endif %}
+      <ul>
+	  {% for reading in day.readings %}
+	  <li>{{ reading|safe }}</li>
+	  {% endfor %}
+	  {% for slide in day.slides %}
+	  <li>{{ slide|safe }}</li>
+	  {% endfor %}
+      </ul>
+    {% endif %}
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    {% for assignment in day.assignments %}
+    <span class="due">Due: {{ assignment|safe }}</span>
+    {% endfor %}
+    </ul>
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block term %}
+Winter 2020
+{% endblock %}
+
+{% block section %}
+Section 1: TTh 3:00pm - 4:15pm 3106 JKB
+{% endblock %}
+
+
+{% set term = 'winter-2020' %}
+
+{% macro render(directory,page,name) -%}
+{% set path = term %}
+{% if directory %}
+{% set path = term + '/' + directory %}
+{% endif %}
+{% set target = page %}
+{% if page == '' %}
+{% set target = 'index' %}
+{% endif %}
+<li class="nav-item {% if active == target %}active{% endif %}">
+<a class="nav-link" href={{url_for("show",directory=path, page=page)}} >{{name}}</a>
+</li>
+{%- endmacro %}
+
+{% macro dropdown(directory,page,name) -%}
+{% set path = term %}
+{% if directory %}
+{% set path = term + '/' + directory %}
+{% endif %}
+{% set target = page %}
+{% if page == '' %}
+{% set target = 'index' %}
+{% endif %}
+<a class="dropdown-item" href={{url_for("show",directory=path, page=page)}} >{{name}}</a>
+{%- endmacro %}
+
+{% block menu %}
+
+{{ render('','','Syllabus') }}
+{{ render('','schedule','Schedule') }}
+{{ render('','lectures','Lecture Material') }}
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="/homework" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Homework</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    {{ dropdown('','homework/homework1','Homework #1') }}
+    {{ dropdown('','homework/homework2','Homework #2') }}
+    {{ dropdown('','homework/homework3','Homework #3') }}
+    {{ dropdown('','homework/homework4','Homework #4') }}
+    {{ dropdown('','homework/homework5','Homework #5') }}
+    {{ dropdown('','homework/homework6','Homework #6') }}
+    {{ dropdown('','homework/homework7','Homework #7') }}
+    {{ dropdown('','homework/homework8','Homework #8') }}
+    {{ dropdown('','homework/homework9','Homework #9') }}
+    {{ dropdown('','homework/homework10','Homework #10') }}
+    {{ dropdown('','homework/homework11','Homework #11') }}
+    {{ dropdown('','homework/homework12','Homework #12') }}
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Projects</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    {{ dropdown('','projects/project1','Project #1: AES') }}
+    {{ dropdown('','projects/project2','Project #2: Hash Attack') }}
+    {{ dropdown('','projects/project3','Project #3: MAC Attack') }}
+    {{ dropdown('','projects/project4','Project #4: Diffie-Hellman') }}
+    {{ dropdown('','projects/project5','Project #5: RSA') }}
+    {{ dropdown('','projects/project6','Project #6: TLS') }}
+    {{ dropdown('','projects/project7','Project #7: Password Cracking') }}
+    {{ dropdown('','projects/project8','Project #8: Buffer Overflow') }}
+    {{ dropdown('','projects/project9','Project #9: Extracting Secrets') }}
+    {{ dropdown('','projects/project10','Project #10: S/MIME and PGP') }}
+    {{ dropdown('','projects/project11','Project #11: CTF Extra Credit') }}
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Help</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    {{ dropdown('help','instructor','Instructor and TAs') }}
+    {{ dropdown('help','officehours','Office Hours') }}
+    {{ dropdown('help','study-guide-midterm1','Midterm 1 Study Guide') }}
+    {{ dropdown('help','study-guide-midterm2','Midterm 2 Study Guide') }}
+    {{ dropdown('help','slack','Class Slack Channel') }}
+    </div>
+    </li>
+</ul>
+
+{% endblock %}
