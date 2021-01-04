@@ -1,0 +1,125 @@
+{% extends "winter-2020/menu.html" %}
+
+
+{% block page %}
+
+{#
+    {% for lec in files %}
+    <div class="lecv"> <A href="{{base}}/{{lec}}">{{lec}}</A> </div>
+    {% endfor %}
+    #}
+
+{% filter markdown %}
+#Lectures and other Resources
+
+##Course Introduction
+* [Course Introduction]({{base}}/Introduction.pdf)
+* [Terminology]({{base}}/Terminology.pdf)
+
+##Applied Cryptography
+
+###Introduction to Cryptography [Lecture Slides - Cryptography into]({{base}}/Cryptography.pdf)
+* [History of Cryptography](http://en.wikipedia.org/wiki/History_of_cryptography)
+
+###AES [Lecture Slides]({{base}}/AES.pdf)
+* [Last semster's Slides for this lecture]({{base}}/AES-f18.pdf)
+* [FIPS197]({{base}}../../pubs/fips-197.pdf)
+* [AES on Wikipedia](http://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
+* [AES Flash Demo](http://students.cs.byu.edu/~cs465ta/lectures/rijndael_ingles2004.swf)  (Try watching in Firefox... Chrome hates flash)
+* [Stick Figure Guide to AES]( http://www.moserware.com/2009/09/stick-figure-guide-to-advanced.html) and [PDF version](http://www.moserware.com/assets/stick-figure-guide-to-advanced/A%20Stick%20Figure%20Guide%20to%20the%20Advanced%20Encryption%20Standard%20%28AES%29.pdf)
+* [Finite Field Multiply Examples](http://docs.google.com/presentation/d/13vkvFGAOcujmaiWLPLdw0gdQE-5psRy2x2pbb98kXHk)
+
+###Block Cipher Modes [Lecture Slides]({{base}}/BlockCipherModes.pdf)
+* [Wikipedia on Block Cipher Modes](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
+* [Padding](http://www.di-mgt.com.au/cryptopad.html)
+* [How to Choose an Authenticated Encryption Mode](https://blog.cryptographyengineering.com/2012/05/19/how-to-choose-authenticated-encryption/)
+* [The Galois/Counter Mode of Operation (GCM)](http://luca-giuzzi.unibs.it/corsi/Support/papers-cryptography/gcm-spec.pdf)
+
+###Cryptographic Hash Functions [Lecture Slides]({{base}}/CryptographicHashFunctions.pdf)
+* Wikipedia on [Cryptographic Hash Functions](http://en.wikipedia.org/wiki/Cryptographic_hash_function)
+* [Birthday Attack](http://en.wikipedia.org/wiki/Birthday_attack)
+* [SHA-1](https://cs465.internet.byu.edu/static/pubs/fips180-3_final.pdf)
+* [SHA-3](http://en.wikipedia.org/wiki/NIST_hash_function_competition)
+* [Chinese researchers find first SHA-1 collision 2005](https://www.schneier.com/blog/archives/2005/02/cryptanalysis_o.html)
+* [Google announces practical collision on SHA-1 Feb 2017](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html)
+* [Class Slides for Hash Attack Discussion](https://docs.google.com/presentation/d/1i2TvaLXZjWtZubOm-7sNVrbmnNg3ji1fQ9XmaWzE_n8/edit?usp=sharing)
+* [Hash Collision Probabilities](https://preshing.com/20110504/hash-collision-probabilities/)
+
+
+### Message Authentication Codes (MAC)  [Lecture Slides]({{base}}/MAC.pdf)
+* [HMAC](http://en.wikipedia.org/wiki/HMAC)
+* [Length Extension Atacks](http://en.wikipedia.org/wiki/Length_extension_attack)
+* [Hash Length Extension Attacks](https://blog.whitehatsec.com/hash-length-extension-attacks/)
+* [Flickr api length extension attack](http://netifera.com/research/flickr_api_signature_forgery.pdf)
+* [Moxy Marlinspike's Crytographic Doom](http://www.thoughtcrime.org/blog/the-cryptographic-doom-principle/)
+* [Vaudenay's MAC attack](https://www.iacr.org/cryptodb/archive/2002/EUROCRYPT/2850/2850.pdf)
+* [Class Slides for MAC Attack Discussion](https://docs.google.com/presentation/d/19HfSDfiPJxaC-snRp-C2gw466UzeYlOtPEpeh2679CE/edit?usp=sharing)
+
+### Public Key Crypto 
+ 
+* Diffie-Hellman [Lecture Slides]({{base}}/Diffie-Hellman.pdf)
+* Wikipedia on [Diffie-Hellman](http://en.wikipedia.org/wiki/Diffie-Hellman_key_exchange)
+* Math explanation on [Diffie-Hellman](http://mathworld.wolfram.com/Diffie-HellmanProtocol.html)
+* [Sample toy DH parameter generation python code](/static/files/dh.zip)
+
+* RSA [Lecture Slides]({{base}}/RSA.pdf)
+* Wikipedia on [RSA](http://en.wikipedia.org/wiki/RSA_(algorithm)) 
+* Extended Euclidean Calculation [Example #1](https://www.youtube.com/watch?v=6KmhCKxFWOs)
+* Extended Euclidean Calculation [Example #2](https://www.youtube.com/watch?v=kYasb426Yjk)
+
+### Certificates
+* [Lecture Slides on PKI]({{base}}/PKI.pdf)
+* [Trusted 3rd Party](https://en.wikipedia.org/wiki/Trusted_third_party)
+* [Verisign issues](https://en.wikipedia.org/wiki/Verisign#Controversies)
+* [DigiNotar](https://en.wikipedia.org/wiki/DigiNotar)
+* [Certificate Hierarchies](https://www.globalsign.com/en/blog/what-is-an-intermediate-or-subordinate-certificate-authority/)
+* [Certificate Revocation Broken in Practice](https://www.globalsign.com/en/blog/what-is-an-intermediate-or-subordinate-certificate-authority/)
+
+
+### Midterm #1
+* [Study Guide](https://docs.google.com/document/d/1tUISx0gQz1OkKihHag4WBzRKlo5hgIB_-ApwGypFmJg/edit?usp=sharing)
+
+### TLS   - [Lecture Slides](https://cs465.internet.byu.edu/static/lectures/w20/TLS.pdf)
+* [First few seconds of an HTTPS connection](http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html)
+* [The Illustrated TLS Connection](https://tls.ulfheim.net/)
+
+  
+### Passwords and Authentication Processes [ Lecture Slides ](https://cs465.internet.byu.edu/static/lectures/w20/Passwords.pdf)
+* [Beyond simple Authentication - Multifactor Auth and Password Vaults](https://docs.google.com/presentation/d/1eqFB1IklngE5x2iEVxkU2q9cV-eFH7JJPF7TK9AE0BM/edit?usp=sharing)
+* [An administrators Guide to Internet Password Research](https://www.microsoft.com/en-us/research/publication/an-administrators-guide-to-internet-password-research/)
+* [Easy Ways to Build a Better P@$5w0rd (NIST)](https://www.nist.gov/blogs/taking-measure/easy-ways-build-better-p5w0rd)
+* [How to Devise Passwords That Drive Hackers Away](https://www.nytimes.com/2012/11/08/technology/personaltech/how-to-devise-passwords-that-drive-hackers-away.html)
+* [Mickens - This World of Ours - and Gigantic Martian Insect Party](https://www.usenix.org/system/files/1401_08-12_mickens.pdf)
+
+
+### Buffer Overflow Attacks [Lecture Slides](https://cs465.internet.byu.edu/static/lectures/w20/BufferOverflow.pdf)
+* [Stack Frame Layout simplified](https://docs.google.com/presentation/d/1FnqqExqirZTQYsI3kN_74OfyiQKBoIsNShXk2ApcNrI/edit?usp=sharing)
+* [Smashing the Stack for Fun and Profit](http://www.cs.wright.edu/people/faculty/tkprasad/courses/cs781/alephOne.html)
+* [Smashing the Stack for Fun and Profit (Today)](https://travisf.net/smashing-the-stack-today)
+* [Smashing the Modern Stack for Fun and Profit](https://www.ethicalhacker.net/columns/heffner/smashing-the-modern-stack-for-fun-and-profit/)
+
+### Secure Email [LectureSlides](https://cs465.internet.byu.edu/static/lectures/w20/SecureEmail.pdf)
+* [Sources for S/MIME certificates](http://kb.mozillazine.org/Getting_an_SMIME_certificate)
+* [Why Johnny Can't Encrypt](https://people.eecs.berkeley.edu/~tygar/papers/Why_Johnny_Cant_Encrypt/USENIX.pdf)
+* [Why Johnny Still Can't Encrypt](https://arxiv.org/pdf/1510.08555.pdf)
+* [System Usability Scale](https://usabilitygeek.com/how-to-use-the-system-usability-scale-sus-to-evaluate-the-usability-of-your-website/)
+* [Filippo Valsorda's Why I'm giving up on PGP](https://blog.filippo.io/giving-up-on-long-term-pgp/)
+* [Phishing article from Class](http://people.cs.vt.edu/danfeng/papers/Phishing-IMC-2018.pdf)
+* [DKIM](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail)
+* [SPF for email](https://en.wikipedia.org/wiki/Sender_Policy_Framework)
+* [Overview of DMARC](https://dmarc.org/overview/)
+* [Authenticated Received Chain ARC](https://en.wikipedia.org/wiki/Authenticated_Received_Chain)
+
+# Integer Manipulation Vulnerabilties
+* [Microsoft's Doc](https://bit.ly/2I9nKPW)
+
+# Midterm #2
+* [Study Guide](https://docs.google.com/document/d/1suND4Z-r1uDvHMj8fSCWAyScR_1gjavcNu8SFtjPcCQ/edit?usp=sharing)
+
+
+
+
+
+{% endfilter %}
+
+{% endblock %}

@@ -1,5 +1,9 @@
+#!/usr/bin/env python
+
 import sys
 
+from views import fall2020
+from views import winter2020
 from views import fall2019
 from views import winter2019
 from views import fall2018
