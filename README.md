@@ -41,7 +41,7 @@ your browser.
 2. Import the new schedule into `app.py`.
 
 3. Create a new directory in `templates` for the new semester, named
-`templates/fall-XXXX.py` or `templates/winter-XXXX.py`.
+`templates/fall-XXXX` or `templates/winter-XXXX`.
 
 4. Link to the new semester in `templates/index.html`
 
