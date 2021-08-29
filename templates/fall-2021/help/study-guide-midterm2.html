@@ -1,0 +1,35 @@
+{% extends "fall-2021/menu.html" %}
+
+{% block page %}
+
+{% filter markdown %}
+
+##placeholder for more info later 
+
+# Midterm #2 Study Guide
+
+* **TLS**: how RSA key exchange works, how DH key exchange works, what
+    a cipher suite includes, the purpose of session resumption, how
+    client authentication works, the advantages of forward secrecy,
+    how TLS 1.3 differs from TLS 1.2
+
+* **Passwords**: how UNIX passwords are stored, how to salt and hash a
+  password, how to crack a password, what a rainbow table attack is,
+  how Lamport's hash works, the purpose of a PAKE protocol
+
+* **Buffer Overflow**: how the stack is organized, what gets pushed on
+    the stack when a function is called, how buffer overflow leads to
+    vulnerabilities, what shell code is and what it does, why a NOP
+    sled is needed, what the defenese against buffer overflow attacks
+    do, how the different types of canaries operate
+
+* **Secure Email**: how SMTP works, why and how email is insecure,
+    defenses that email providers are taking and what they do,
+	differences between S/MIME and PGP, how secure webmail works,
+    familiarity with viewpoints in the debate over
+    end-to-end-encryption and exceptional (or backdoor) access
+
+
+{% endfilter %}
+
+{% endblock %}
