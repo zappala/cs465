@@ -48,7 +48,8 @@ def fall2021schedule():
     d.reading("How to Choose an Authenticated Encryption Mode (optional)", "https://blog.cryptographyengineering.com/2012/05/19/how-to-choose-authenticated-encryption/")
     d.reading("The Galois/Counter Mode of Operation (GCM) (optional)","http://luca-giuzzi.unibs.it/corsi/Support/papers-cryptography/gcm-spec.pdf")
 
-    d = s.day("Sept 13")
+    #d = s.day("Sept 13")
+    d = s.day("Sept 10")
     d.assignment("Project #1: AES",term + 'projects/project1')
 
     #week 3
@@ -125,8 +126,8 @@ def fall2021schedule():
     s.week()
 
     d = s.day("Oct 12")
-    d.assignment("None", None)
     d.lecture("In Class Review for Midterm Exam 1.") 
+    d.assignment("Homework #7",term + 'homework/homework7')
     d.slide("Midterm Exam 1 study guide","https://docs.google.com/document/d/1tUISx0gQz1OkKihHag4WBzRKlo5hgIB_-ApwGypFmJg/edit?usp=sharing")
 
     d = s.day("Oct 14")
@@ -136,7 +137,7 @@ def fall2021schedule():
     s.week()
 
     d = s.day("Oct 19")
-    d.assignment("Homework #7",term + 'homework/homework7')
+    d.assignment("Homework #7.5",term + 'homework/homework7.5')
     d.lecture("TLS Part 1")
     d.slide("TLS",static + "TLS-2020.pdf")
     d.reading("The First Few Milliseconds of an HTTPS Connection","http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html")
