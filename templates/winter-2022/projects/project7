@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS 465 Computer Security</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Lora:700|Work+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="/static/css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid header">
+      <div class="row">
+	<div class="col-md-7 brand">
+	  <a href="/">CS 465 Computer Security</a>
+	</div>
+	<div class="col-md-5 affiliation">
+	  <a href="https://www.byu.edu">BYU</a> | <a
+	  href="https://cs.byu.edu">Computer Science</a>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-sm">
+	  <h1>
+Winter 2022
+</h1>
+	  <h4>
+Section 1: MWF, 11:00am - 11:50am, TMCB 120
+</h4>
+	</div>
+	</div>
+	</div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+  <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav mr-auto">
+	  
+
+
+
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/winter-2022/ >Syllabus</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/winter-2022/schedule >Schedule</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/winter-2022/lectures >Lecture Material</a>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="/homework" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Homework</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework1 >Homework #1</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework2 >Homework #2</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework3 >Homework #3</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework4 >Homework #4</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework5 >Homework #5</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework6 >Homework #6</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework7 >Homework #7</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework8 >Homework #8</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework9 >Homework #9</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework10 >Homework #10</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework11 >Homework #11</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework12 >Homework #12</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework13 >Homework #13</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Projects</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project1 >Project #1: AES</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project2 >Project #2: Hash Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project3 >Project #3: MAC Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project4 >Project #4: Diffie-Hellman</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project5 >Project #5: RSA</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project6 >Project #6: TLS</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project7 >Project #7: Password Cracking</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project8 >Project #8: Extracting Secrets</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project9 >Project #9: Buffer Overflow</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project10 >Project #10: S/MIME and PGP</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project11 >Project #11: CTF Extra Credit</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Help</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/instructor >Instructor and TAs</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/officehours >Office Hours</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/study-guide-midterm1 >Midterm 1 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/study-guide-midterm2 >Midterm 2 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/slack >Class Slack Channel</a>
+    </div>
+    </li>
+</ul>
+
+
+	</ul>
+      </div>
+    </div>
+    </nav>
+
+    <div id="page" class="white">
+    <div class="container-fluid">
+    <div class="row">
+          <div class="col-sm">
+
+	    
+
+<h1>Project 7: Password Cracking</h1>
+<h2>Objectives</h2>
+<ul>
+<li>
+<p>Gain further intuition regarding the strength of passwords against
+modern computing power and algorithms.</p>
+</li>
+<li>
+<p>Gain knowledge of popular password cracking tools</p>
+</li>
+<li>
+<p>Critically assess password strength, and make judgments about the
+future of password security</p>
+</li>
+</ul>
+<h2>Instructions</h2>
+<ol>
+<li>
+<p>Read about the Unix password file formats, <a href="http://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/">/etc/passwd</a> and <a href="http://www.cyberciti.biz/faq/understanding-etcshadow-file/">/etc/shadow</a>. In particular, make sure you understand where and how usernames, salts, and hashed passwords are stored.</p>
+</li>
+<li>
+<p>Create a simple program that can generate dummy passwd and shadow files, given user input of a username and password (plaintext). The input can be in whatever format you would like (single entry from command-line, list of entries from a file, etc.). You can use the crypt() function in C to create a Unix password style MD5 hash (include crypt.h). You may use any value you wish, constant or otherwise, for your salts, so long as they adhere to the salt charset rules. Example <a href="/static/files/passwd.txt">passwd</a> and <a href="/static/files/shadow.txt">shadow</a>
+files are available.</p>
+</li>
+<li>
+<p>Test the passwd and shadow files generated by your program to ensure that they are formatted properly. You will run into problems if they are not. The pwck command
+should help with this.</p>
+</li>
+<li>
+<p>Download and install the correct version of John the Ripper for your operating system.</p>
+</li>
+<li>
+<p>Using the <a href="http://www.openwall.com/john/doc/">documentation</a> (I also found <a href="https://linuxconfig.org/password-cracking-with-john-the-ripper-on-linux">this</a> to be a useful start for linux users), figure out how to use John the Ripper. In particular, figure out how to use the “unshadow” utility bundled with John the Ripper, how to set minimum and maximum lengths for cracking, and how to use a custom wordlist.</p>
+</li>
+<li>
+<p>Use this <a href="http://www.passwordmeter.com/">password strength meter</a>. to create passwords at various strength levels. For each strength type, make a password that contains:</p>
+<ul>
+<li>Only lowercase letters</li>
+<li>Both lowercase and uppercase letters</li>
+<li>Lower and uppercase letters, numeric digits, and punctuation</li>
+</ul>
+</li>
+<li>
+<p>Using the program you wrote in step 2, create passwd and shadow files for each password strength type.</p>
+</li>
+<li>
+<p>Use John the Ripper to try and crack the passwords you have created. Start with the weak passwords and work your way up until you find that you are unable to crack the passwords in a realistic time frame. Feel free to use any heuristic that John the Ripper allows, and experiment with other wordlists too. There are many free wordlists online. We host a <a href="/static/files/cracklib.txt">decent one</a>, but there are far more robust ones elsewhere. You may also experiment with running John the Ripper on multiple machines, with each instance operating on a subset of your passwords. As John the Ripper runs, you may hit any key to view some statistics. One of these is comparisons per second (c/s). Roughly keep track of the average number of comparisons per second that John the Ripper attains during your cracking.</p>
+</li>
+<li>
+<p>As you crack increasingly secure passwords, it may be useful to use multiple machines to run simultaneous instances of John the Ripper. If you choose to do this on the CS lab machines, please do not use any more than 6 machines.</p>
+</li>
+<li>
+<p>Additionally, be sure to run your John the Ripper processes in the background in a high “nice” mode. This will make sure that our cracking processes do not interfere with other students' activities on the lab machines. To run a command with a high nice mode, you can use</p>
+</li>
+</ol>
+<blockquote>
+<p>nice -n 15 [command] [args]</p>
+</blockquote>
+<p>where [command] is the name of your binary and [args] are the arguments passed to it. If you fail to use nice, the sysadmins will likely have to kill your process and will disable your account.</p>
+<h2>Questions</h2>
+<p>Thoughtfully answer the questions below. Submit your answers for passoff.</p>
+<ol>
+<li>
+<p>Assuming that you used your setup for this lab alone, how long do you calculate that it would take to crack a 6-character alphanumeric password? 8-characters?  10-characters? 12-characters? (use the c/s measurement from your experiments).</p>
+</li>
+<li>
+<p>Do you think that the password meter is a good indication of actual password security? From the results of your experiment, what is your recommendation for minimum password length? Be creative in your response. Imagine what hardware and resources a potential attacker might have, and briefly justify your assessment of the attacker’s capabilities.</p>
+</li>
+<li>
+<p>Recently, high-end GPUs have revolutionized password cracking. One tool, <a href="https://www.darknet.org.uk/2016/08/ighashgpu-gpu-based-hash-cracking-sha1-md5-md4/">ighashgpu</a>, is able to perform 1.3 billion MD5 hashes per second on an AMD Radeon 5850 (a 2-year-old, mid-to-high range video card). <a href="http://whitepixel.zorinaq.com/">Whitepixel</a>, another tool, claims that it can perform 33.1 billion hashes per second using 4 Radeon 5970s. Consider your calculations in question #1, and redo them assuming you had access to a system with 4 Radeon 5970s. Do your answers for question #2 change?</p>
+</li>
+<li>
+<p>Fedora 14 and other modern Linux distributions use a SHA-512 (rather than MD5) for hashing passwords. Does the use of this hashing algorithm improve password security in some way? Why or why not?</p>
+</li>
+<li>
+<p>Does the use of a salt increase password security? Why or why not?</p>
+</li>
+<li>
+<p>Against any competent system, an online attack of this nature would not be possible due to network lag, timeouts, and throttling by the system administrator. Does this knowledge lessen the importance of offline password attack protection?</p>
+</li>
+<li>
+<p>OPTIONAL QUESTION: The sheer power of GPUs make John the Ripper pale in comparison, despite all the heuristics John the Ripper employs. With hardware continually becoming more powerful, do you foresee a day in the near future when minimal password lengths will be too large for a typical person to remember? If so, what types of vulnerabilities may arise from such a scenario? What would you recommend as the next step in password evolution?﻿</p>
+</li>
+<li>
+<p>Extra Credit (5 points) Download and use hashcat. Compare usage to john the ripper.</p>
+</li>
+<li>
+<p>Extra Credit2 (5 points) If you have your own hardware available, try to use hashcat with a GPU and compare CPU versus GPU hashing speeds for similar inputs.</p>
+</li>
+</ol>
+<h2>Submission</h2>
+<p>Submit a PDF of your report on Learning Suite.</p>
+
+
+	    </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="footer">
+      <div class="row">
+	<div id="license">
+	</div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+    <script>
+  </body>
+</html>

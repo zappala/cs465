@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS 465 Computer Security</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Lora:700|Work+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="/static/css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid header">
+      <div class="row">
+	<div class="col-md-7 brand">
+	  <a href="/">CS 465 Computer Security</a>
+	</div>
+	<div class="col-md-5 affiliation">
+	  <a href="https://www.byu.edu">BYU</a> | <a
+	  href="https://cs.byu.edu">Computer Science</a>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-sm">
+	  <h1>
+Winter 2022
+</h1>
+	  <h4>
+Section 1: MWF, 11:00am - 11:50am, TMCB 120
+</h4>
+	</div>
+	</div>
+	</div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+  <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav mr-auto">
+	  
+
+
+
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/winter-2022/ >Syllabus</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/winter-2022/schedule >Schedule</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/winter-2022/lectures >Lecture Material</a>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="/homework" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Homework</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework1 >Homework #1</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework2 >Homework #2</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework3 >Homework #3</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework4 >Homework #4</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework5 >Homework #5</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework6 >Homework #6</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework7 >Homework #7</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework8 >Homework #8</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework9 >Homework #9</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework10 >Homework #10</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework11 >Homework #11</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework12 >Homework #12</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework13 >Homework #13</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Projects</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project1 >Project #1: AES</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project2 >Project #2: Hash Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project3 >Project #3: MAC Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project4 >Project #4: Diffie-Hellman</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project5 >Project #5: RSA</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project6 >Project #6: TLS</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project7 >Project #7: Password Cracking</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project8 >Project #8: Extracting Secrets</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project9 >Project #9: Buffer Overflow</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project10 >Project #10: S/MIME and PGP</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project11 >Project #11: CTF Extra Credit</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Help</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/instructor >Instructor and TAs</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/officehours >Office Hours</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/study-guide-midterm1 >Midterm 1 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/study-guide-midterm2 >Midterm 2 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/slack >Class Slack Channel</a>
+    </div>
+    </li>
+</ul>
+
+
+	</ul>
+      </div>
+    </div>
+    </nav>
+
+    <div id="page" class="white">
+    <div class="container-fluid">
+    <div class="row">
+          <div class="col-sm">
+
+	    
+
+
+
+<h1>Lectures and other Resources</h1>
+<h2>Course Introduction</h2>
+<ul>
+<li><a href="/static/lectures/f21//Introduction.pdf">Course Introduction</a></li>
+<li><a href="/static/lectures/f21//Terminology.pdf">Terminology</a></li>
+</ul>
+<h2>Applied Cryptography</h2>
+<h3>Introduction to Cryptography <a href="/static/lectures/f21//Cryptography.pdf">Lecture Slides - Cryptography into</a></h3>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/History_of_cryptography">History of Cryptography</a></li>
+</ul>
+<h3>AES <a href="/static/lectures/f21//AES.pdf">Lecture Slides</a></h3>
+<ul>
+<li><a href="/static/lectures/f21//AES-f18.pdf">Last semster's Slides for this lecture</a></li>
+<li><a href="/static/lectures/f21/../../pubs/fips-197.pdf">FIPS197</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES on Wikipedia</a></li>
+<li><a href="http://students.cs.byu.edu/~cs465ta/lectures/rijndael_ingles2004.swf">AES Flash Demo</a>  (Try watching in Firefox... Chrome hates flash)</li>
+<li><a href="https://www.youtube.com/watch?v=mlzxpkdXP58">AES youtube Demo</a> </li>
+<li><a href="http://www.moserware.com/2009/09/stick-figure-guide-to-advanced.html">Stick Figure Guide to AES</a> and <a href="http://www.moserware.com/assets/stick-figure-guide-to-advanced/A%20Stick%20Figure%20Guide%20to%20the%20Advanced%20Encryption%20Standard%20%28AES%29.pdf">PDF version</a></li>
+<li><a href="http://docs.google.com/presentation/d/13vkvFGAOcujmaiWLPLdw0gdQE-5psRy2x2pbb98kXHk">Finite Field Multiply Examples</a></li>
+</ul>
+<h3>Block Cipher Modes <a href="/static/lectures/f21//BlockCipherModes.pdf">Lecture Slides</a></h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation">Wikipedia on Block Cipher Modes</a></li>
+<li><a href="http://www.di-mgt.com.au/cryptopad.html">Padding</a></li>
+<li><a href="https://blog.cryptographyengineering.com/2012/05/19/how-to-choose-authenticated-encryption/">How to Choose an Authenticated Encryption Mode</a></li>
+<li><a href="http://luca-giuzzi.unibs.it/corsi/Support/papers-cryptography/gcm-spec.pdf">The Galois/Counter Mode of Operation (GCM)</a></li>
+</ul>
+<h3>Cryptographic Hash Functions <a href="/static/lectures/f21//CryptographicHashFunctions.pdf">Lecture Slides</a></h3>
+<ul>
+<li>Wikipedia on <a href="http://en.wikipedia.org/wiki/Cryptographic_hash_function">Cryptographic Hash Functions</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Birthday_attack">Birthday Attack</a></li>
+<li><a href="https://cs465.byu.edu/static/pubs/fips180-3_final.pdf">SHA-1</a></li>
+<li><a href="http://en.wikipedia.org/wiki/NIST_hash_function_competition">SHA-3</a></li>
+<li><a href="https://www.schneier.com/blog/archives/2005/02/cryptanalysis_o.html">Chinese researchers find first SHA-1 collision 2005</a></li>
+<li><a href="https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html">Google announces practical collision on SHA-1 Feb 2017</a></li>
+<li><a href="https://docs.google.com/presentation/d/1i2TvaLXZjWtZubOm-7sNVrbmnNg3ji1fQ9XmaWzE_n8/edit?usp=sharing">Class Slides for Hash Attack Discussion</a></li>
+<li><a href="https://preshing.com/20110504/hash-collision-probabilities/">Hash Collision Probabilities</a></li>
+</ul>
+<h3>Message Authentication Codes (MAC)  <a href="/static/lectures/f21//MAC.pdf">Lecture Slides</a></h3>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/HMAC">HMAC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Length_extension_attack">Length Extension Atacks</a></li>
+<li><a href="https://www.whitehatsec.com/blog/hash-length-extension-attacks/">Hash Length Extension Attacks</a></li>
+<li><a href="http://netifera.com/research/flickr_api_signature_forgery.pdf">Flickr api length extension attack</a></li>
+<li><a href="http://www.thoughtcrime.org/blog/the-cryptographic-doom-principle/">Moxy Marlinspike's Crytographic Doom</a></li>
+<li><a href="https://www.iacr.org/cryptodb/archive/2002/EUROCRYPT/2850/2850.pdf">Vaudenay's MAC attack</a></li>
+<li><a href="https://docs.google.com/presentation/d/19HfSDfiPJxaC-snRp-C2gw466UzeYlOtPEpeh2679CE/edit?usp=sharing">Class Slides for MAC Attack Discussion</a></li>
+</ul>
+<h3>Public Key Crypto</h3>
+<ul>
+<li>Diffie-Hellman <a href="/static/lectures/f21//Diffie-Hellman.pdf">Lecture Slides</a></li>
+<li>Wikipedia on <a href="http://en.wikipedia.org/wiki/Diffie-Hellman_key_exchange">Diffie-Hellman</a></li>
+<li>Math explanation on <a href="http://mathworld.wolfram.com/Diffie-HellmanProtocol.html">Diffie-Hellman</a></li>
+<li>
+<p><a href="/static/files/dh.zip">Sample toy DH parameter generation python code</a></p>
+</li>
+<li>RSA <a href="/static/lectures/f21//RSA.pdf">Lecture Slides</a></li>
+<li>Wikipedia on <a href="http://en.wikipedia.org/wiki/RSA_(algorithm)">RSA</a> </li>
+<li><a href="https://soatok.blog/2021/01/20/please-stop-encrypting-with-rsa-directly/">Please Stop Encrypting with RSA Directly</a></li>
+<li>Extended Euclidean Calculation <a href="https://www.youtube.com/watch?v=6KmhCKxFWOs">Example #1</a></li>
+<li>Extended Euclidean Calculation <a href="https://www.youtube.com/watch?v=kYasb426Yjk">Example #2</a></li>
+</ul>
+<h3>Certificates</h3>
+<ul>
+<li><a href="/static/lectures/f21//PKI.pdf">Lecture Slides on PKI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Trusted_third_party">Trusted 3rd Party</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Verisign#Controversies">Verisign issues</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DigiNotar">DigiNotar</a></li>
+<li><a href="https://www.globalsign.com/en/blog/what-is-an-intermediate-or-subordinate-certificate-authority/">Certificate Hierarchies</a></li>
+<li><a href="https://www.globalsign.com/en/blog/what-is-an-intermediate-or-subordinate-certificate-authority/">Certificate Revocation Broken in Practice</a></li>
+</ul>
+<h3>Midterm #1</h3>
+<ul>
+<li><a href="https://docs.google.com/document/d/1Te0Z-AnMGX9aECaZQGG5kzO8hQKtWOO1a7ksLOzlYmY/">Study Guide</a></li>
+</ul>
+<h3>TLS   - <a href="https://cs465.byu.edu/static/lectures/f21/TLS-2020.pdf">Lecture Slides</a></h3>
+<ul>
+<li><a href="http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html">First few seconds of an HTTPS connection</a></li>
+<li><a href="https://tls.ulfheim.net/">The Illustrated TLS Connection</a></li>
+</ul>
+<h3>Passwords and Authentication Processes <a href="https://cs465.byu.edu/static/lectures/f21/Passwords.pdf"> Lecture Slides </a></h3>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1eqFB1IklngE5x2iEVxkU2q9cV-eFH7JJPF7TK9AE0BM/edit?usp=sharing">Beyond simple Authentication - Multifactor Auth and Password Vaults</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/publication/an-administrators-guide-to-internet-password-research/">An administrators Guide to Internet Password Research</a></li>
+<li><a href="https://www.nist.gov/blogs/taking-measure/easy-ways-build-better-p5w0rd">Easy Ways to Build a Better P@$5w0rd (NIST)</a></li>
+<li><a href="https://www.nytimes.com/2012/11/08/technology/personaltech/how-to-devise-passwords-that-drive-hackers-away.html">How to Devise Passwords That Drive Hackers Away</a></li>
+<li><a href="https://www.usenix.org/system/files/1401_08-12_mickens.pdf">Mickens - This World of Ours - and Gigantic Martian Insect Party</a></li>
+</ul>
+<h3>Buffer Overflow Attacks <a href="https://cs465.byu.edu/static/lectures/f21/BufferOverflow.pdf">Lecture Slides</a></h3>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1FnqqExqirZTQYsI3kN_74OfyiQKBoIsNShXk2ApcNrI/edit?usp=sharing">Stack Frame Layout simplified</a></li>
+<li><a href="http://www.cs.wright.edu/people/faculty/tkprasad/courses/cs781/alephOne.html">Smashing the Stack for Fun and Profit</a></li>
+<li><a href="https://travisf.net/smashing-the-stack-today">Smashing the Stack for Fun and Profit (Today)</a></li>
+<li><a href="https://www.ethicalhacker.net/columns/heffner/smashing-the-modern-stack-for-fun-and-profit/">Smashing the Modern Stack for Fun and Profit</a></li>
+</ul>
+<h3>Secure Email <a href="https://cs465.byu.edu/static/lectures/f21/SecureEmail.pdf">LectureSlides</a></h3>
+<ul>
+<li><a href="http://kb.mozillazine.org/Getting_an_SMIME_certificate">Sources for S/MIME certificates</a></li>
+<li><a href="https://people.eecs.berkeley.edu/~tygar/papers/Why_Johnny_Cant_Encrypt/USENIX.pdf">Why Johnny Can't Encrypt</a></li>
+<li><a href="https://arxiv.org/pdf/1510.08555.pdf">Why Johnny Still Can't Encrypt</a></li>
+<li><a href="https://usabilitygeek.com/how-to-use-the-system-usability-scale-sus-to-evaluate-the-usability-of-your-website/">System Usability Scale</a></li>
+<li><a href="https://blog.filippo.io/giving-up-on-long-term-pgp/">Filippo Valsorda's Why I'm giving up on PGP</a></li>
+<li><a href="http://people.cs.vt.edu/danfeng/papers/Phishing-IMC-2018.pdf">Phishing article from Class</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail">DKIM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sender_Policy_Framework">SPF for email</a></li>
+<li><a href="https://dmarc.org/overview/">Overview of DMARC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Authenticated_Received_Chain">Authenticated Received Chain ARC</a></li>
+</ul>
+<h3>Integer Manipulation Vulnerabilties</h3>
+<ul>
+<li><a href="https://bit.ly/2I9nKPW">Microsoft's Doc</a></li>
+</ul>
+<h3>Midterm #2</h3>
+<ul>
+<li><a href="https://docs.google.com/document/d/1HZtcQ4YfiKS62g9wICPhCPvmA0DPhzl7pT7JCm4St3s">Study Guide</a></li>
+</ul>
+
+
+	    </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="footer">
+      <div class="row">
+	<div id="license">
+	</div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+    <script>
+  </body>
+</html>

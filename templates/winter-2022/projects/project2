@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS 465 Computer Security</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Lora:700|Work+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="/static/css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid header">
+      <div class="row">
+	<div class="col-md-7 brand">
+	  <a href="/">CS 465 Computer Security</a>
+	</div>
+	<div class="col-md-5 affiliation">
+	  <a href="https://www.byu.edu">BYU</a> | <a
+	  href="https://cs.byu.edu">Computer Science</a>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-sm">
+	  <h1>
+Winter 2022
+</h1>
+	  <h4>
+Section 1: MWF, 11:00am - 11:50am, TMCB 120
+</h4>
+	</div>
+	</div>
+	</div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+  <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav mr-auto">
+	  
+
+
+
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/winter-2022/ >Syllabus</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/winter-2022/schedule >Schedule</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/winter-2022/lectures >Lecture Material</a>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="/homework" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Homework</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework1 >Homework #1</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework2 >Homework #2</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework3 >Homework #3</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework4 >Homework #4</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework5 >Homework #5</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework6 >Homework #6</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework7 >Homework #7</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework8 >Homework #8</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework9 >Homework #9</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework10 >Homework #10</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework11 >Homework #11</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework12 >Homework #12</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework13 >Homework #13</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Projects</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project1 >Project #1: AES</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project2 >Project #2: Hash Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project3 >Project #3: MAC Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project4 >Project #4: Diffie-Hellman</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project5 >Project #5: RSA</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project6 >Project #6: TLS</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project7 >Project #7: Password Cracking</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project8 >Project #8: Extracting Secrets</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project9 >Project #9: Buffer Overflow</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project10 >Project #10: S/MIME and PGP</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project11 >Project #11: CTF Extra Credit</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Help</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/instructor >Instructor and TAs</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/officehours >Office Hours</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/study-guide-midterm1 >Midterm 1 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/study-guide-midterm2 >Midterm 2 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/slack >Class Slack Channel</a>
+    </div>
+    </li>
+</ul>
+
+
+	</ul>
+      </div>
+    </div>
+    </nav>
+
+    <div id="page" class="white">
+    <div class="container-fluid">
+    <div class="row">
+          <div class="col-sm">
+
+	    
+
+<h1>Project #2: Hash Attack</h1>
+<h2>Objectives</h2>
+<p>The objectives for this assignment are:</p>
+<ul>
+<li>Understand the distinction between collision attacks and pre-image attacks.</li>
+<li>Test whether theoretical costs are observed in practice</li>
+<li>Demonstrate ability to design and conduct an experiment</li>
+<li>Demonstrate ability to convey technical results clearly</li>
+</ul>
+<h2>Background</h2>
+<p>A collision attack in hashing is when an attacker finds two separate
+source messages that both hash to the same value. The expected time
+for this attack is 2^(n/2) where n is the number of bits in the hash
+digest.</p>
+<p>A pre-image attack in hashing is when an attacker is given a specific
+hash value (usually the hash value of an intercepted message) and is
+asked to find a source message that hashes to that value. The expected
+time for this attack is 2^n where n is the number of bits in the
+digest.</p>
+<h2>Project Description</h2>
+<p>In this lab, you will gather experimental data regarding how difficult
+it is to perform a collision and preimage attack on a hash.</p>
+<p>For this lab you will need to do the following:</p>
+<ol>
+<li>
+<p>Create a wrapper for SHA-1 which takes as input the string to hash
+as well as the number of bits (n) that the hash should be. The output
+will be the SHA-1 hash of the given string truncated to the provided
+number of bits.</p>
+</li>
+<li>
+<p>Using this wrapper, conduct a series of collision and preimage
+attacks at different bit sizes.</p>
+<ul>
+<li>
+<p>You should test at least 4 different bit sizes between the range
+  8 to 32. Choose reasonable values for bit sizes (e.g., 8, 10, 16, 20,
+  24). You should have at most 2 trials at bit sizes between 8-15.</p>
+</li>
+<li>
+<p>You should include data for non-multiple-of-8 bitsizes.</p>
+</li>
+<li>
+<p>Don't attempt attacks against bit sizes that take you hours to
+  complete. Be reasonable.</p>
+</li>
+<li>
+<p>Keep track of the number of attempts (hashes) it took for the
+  attack to be successful. Do not track wall-clock time.</p>
+</li>
+<li>
+<p>You should gather at least 50 samples at each bit size.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Write a 2-4 page report, describing how your experimental
+results compare to the theoretical difficulty of attacking a hash of a
+given size.</p>
+<ul>
+<li>
+<p>Your report should be clear and concise.</p>
+</li>
+<li>
+<p>Your report should include a graph or table summarize your experimental results.
+  The graph should compare the bitsize with the average number of
+  attempts it took for each attack type to be successful.</p>
+</li>
+<li>
+<p>Your graph or table should report on the variance you saw during
+  testing.</p>
+</li>
+<li>
+<p>Recommendation: Use a logarithmic scale graph.</p>
+</li>
+<li>
+<p>Recommendation: Plot theoretical cost vs experimental results</p>
+</li>
+<li>
+<p>Target Audience:  Technical people who do not know about this 
+  specific property of hashes and hash attacks</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Have another person review your report and give you feedback on the
+clarity of the writing and results. Include the name of your reviewer
+in your final written report for full credit.</p>
+</li>
+</ol>
+<h1>Starting Point</h1>
+<p>SHA-1 typically produces a 160-bit digest. To create our toy SHA-1
+implementation, we will use a valid SHA-1 implementation and truncate
+the results so that the digest is of a reduced size.</p>
+<p>Although there are many implementations of SHA-1 available on the web,
+we suggest using one of the following:</p>
+<h3>Java</h3>
+<ul>
+<li>included <a href="http://docs.oracle.com/javase/6/docs/api/java/security/MessageDigest.html">SHA-1
+ algorithm</a> (<a href="http://www.java2s.com/Tutorial/Java/0490__Security/Encryptapassword.htm">simple example of hashing a string</a>)</li>
+</ul>
+<h3>C/C++</h3>
+<ul>
+<li>
+<p><a href="http://www.openssl.org/">OpenSSL</a> <a href="http://stackoverflow.com/questions/918676/generate-sha-hash-in-openssl">(Simple example)</a></p>
+</li>
+<li>
+<p><a href="http://www.cryptopp.com/">Crypto++</a></p>
+</li>
+<li>
+<p><a href="http://hashlib2plus.sourceforge.net/">hashlib++</a></p>
+</li>
+</ul>
+<h3>C&#35;</h3>
+<ul>
+<li><a href="http://msdn.microsoft.com/en-us/library/system.security.cryptography.sha1cryptoserviceprovider.aspx">System.Security.Cryptography.SHA1CryptoServiceProvider﻿</a>
+(<a href="http://pastebin.com/fkfgvsnw">Usage example with tips</a>)</li>
+</ul>
+<h3>Python</h3>
+<ul>
+<li>Look at the built-in hashlib. And for python3 understand the bytes
+type versus the bytearray type (bytearray is mutable). Even though
+there is a learning curve, I recommend python3.</li>
+</ul>
+<p>When choosing your language/library, consider that more common
+libraries like OpenSSL or those included with Java or C# often have
+better documentation and are easier to get help with than a less
+commonly used implementation. They are also good experience to list on
+a resume.</p>
+<p>If you find another library or source code that could be helpful to
+other students, please share them on Piazza.</p>
+<h2>Grading</h2>
+<p>The specification for this assignment has been left open-ended
+intentionally. We expect that each student will create their own plan
+for performing the attacks and find an effective way of presenting
+their results.</p>
+<h2>Grading Rubric:</h2>
+<ul>
+<li>
+<p>20 points for report describing your experiment - think: reproducability</p>
+</li>
+<li>
+<p>10 points will be awarded based on the quality of the writeup that
+explains your experimental design</p>
+</li>
+<li>
+<p>10 points for the quality and clarity of the graph(s) presenting your
+data</p>
+</li>
+<li>
+<p>5 points if results are consistent with the theory or include an
+explanation why they might (mildly) differ from the expected cost</p>
+</li>
+<li>
+<p>5 points for soliciting one external review of your report</p>
+</li>
+</ul>
+<h2>Submission</h2>
+<p>Submit your written report as a PDF file along with a zip file or gzip
+file with your source code to Learning Suite.</p>
+<h2>Tips and Hints</h2>
+<ul>
+<li>
+<p>Make sure that you use BIT sizes not byte sizes.</p>
+</li>
+<li>
+<p>If you find results that a drastically different from the
+  theoretical values, take a look at your code and look for
+  implementation errors.</p>
+</li>
+</ul>
+
+
+	    </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="footer">
+      <div class="row">
+	<div id="license">
+	</div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+    <script>
+  </body>
+</html>

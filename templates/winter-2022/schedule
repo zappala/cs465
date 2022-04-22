@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS 465 Computer Security</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Lora:700|Work+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="/static/css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid header">
+      <div class="row">
+	<div class="col-md-7 brand">
+	  <a href="/">CS 465 Computer Security</a>
+	</div>
+	<div class="col-md-5 affiliation">
+	  <a href="https://www.byu.edu">BYU</a> | <a
+	  href="https://cs.byu.edu">Computer Science</a>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-sm">
+	  <h1>
+Winter 2022
+</h1>
+	  <h4>
+Section 1: MWF, 11:00am - 11:50am, TMCB 120
+</h4>
+	</div>
+	</div>
+	</div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+  <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav mr-auto">
+	  
+
+
+
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/winter-2022/ >Syllabus</a>
+</li>
+
+
+
+
+<li class="nav-item active">
+<a class="nav-link" href=/winter-2022/schedule >Schedule</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/winter-2022/lectures >Lecture Material</a>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="/homework" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Homework</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework1 >Homework #1</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework2 >Homework #2</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework3 >Homework #3</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework4 >Homework #4</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework5 >Homework #5</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework6 >Homework #6</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework7 >Homework #7</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework8 >Homework #8</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework9 >Homework #9</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework10 >Homework #10</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework11 >Homework #11</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework12 >Homework #12</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/homework/homework13 >Homework #13</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Projects</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project1 >Project #1: AES</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project2 >Project #2: Hash Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project3 >Project #3: MAC Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project4 >Project #4: Diffie-Hellman</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project5 >Project #5: RSA</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project6 >Project #6: TLS</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project7 >Project #7: Password Cracking</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project8 >Project #8: Extracting Secrets</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project9 >Project #9: Buffer Overflow</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project10 >Project #10: S/MIME and PGP</a>
+    
+
+
+
+<a class="dropdown-item" href=/winter-2022/projects/project11 >Project #11: CTF Extra Credit</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Help</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/instructor >Instructor and TAs</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/officehours >Office Hours</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/study-guide-midterm1 >Midterm 1 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/study-guide-midterm2 >Midterm 2 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/winter-2022/help/slack >Class Slack Channel</a>
+    </div>
+    </li>
+</ul>
+
+
+	</ul>
+      </div>
+    </div>
+    </nav>
+
+    <div id="page" class="white">
+    <div class="container-fluid">
+    <div class="row">
+          <div class="col-sm">
+
+	    
+
+<h1>Schedule</h1>
+
+<p>This schedule is <u>subject to change</u>. Assignments may be changed up until the day they are assigned.</p>
+
+
+<h2 class="plain">Week 1</h2>
+
+
+<div class="schedule">
+
+  <div class="day">Jan 3</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Introduction</span> 
+      <ul>
+	  
+	  
+	  <li>Slides: <a href="/static/lectures/f21/Introduction.pdf">Introduction</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+    <span class="due">Due: <a href="/winter-2022/homework/homework1">Homework #1</a></span>
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Jan 5</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Introduction</span> 
+      <ul>
+	  
+	  <li>Slides: <a href="/static/lectures/f21/Terminology.pdf">Terminology</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Jan 7</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Cryptography</span> 
+      <ul>
+	  
+	  
+	  <li>Slides: <a href="/static/lectures/f21/Cryptography.pdf">Cryptography</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<h2 class="plain">Week 2</h2>
+
+<div class="schedule">
+
+  <div class="day">Jan 10</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Advanced Encryption Standard (AES)</span> 
+      <ul>
+	  
+	  <li>Slides: <a href="/static/lectures/f21/AES.pdf">AES</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Jan 12</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">No Class: Work on Project #1</span> 
+      <ul>
+	  
+	  
+	  <li>Slides: <a href="/static/lectures/f21/AES.pdf">AES</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Jan 14</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Block Cipher Modes and Padding</span> 
+      <ul>
+	  
+	  <li>Reading: <a href="https://blog.cryptographyengineering.com/2012/05/19/how-to-choose-authenticated-encryption/">How to Choose an Authenticated Encryption Mode </a></li>
+	  
+	  <li>Reading: <a href="http://luca-giuzzi.unibs.it/corsi/Support/papers-cryptography/gcm-spec.pdf">The Galois/Counter Mode of Operation (GCM) </a></li>
+	  
+	  
+	  <li>Slides: <a href="/static/lectures/f21/BlockCipherModes.pdf">Block Cipher Modes</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/homework/homework2">Homework #2</a></span>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<h2 class="plain">Week 3</h2>
+
+<div class="schedule">
+
+  <div class="day">Jan 17</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Holiday --- No class</span>
+    
+    </div>
+
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+    </div>
+    
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Jan 18</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section"></span>
+    
+    </div>
+
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/projects/project1">Project #1: AES</a></span>
+      </ul>
+    </div>
+    
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Jan 19</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Authenticated Encryption Modes</span> 
+      <ul>
+	  
+	  <li>Reading: <a href="https://blog.cryptographyengineering.com/2012/05/19/how-to-choose-authenticated-encryption/">How to Choose an Authenticated Encryption Mode </a></li>
+	  
+	  <li>Reading: <a href="http://luca-giuzzi.unibs.it/corsi/Support/papers-cryptography/gcm-spec.pdf">The Galois/Counter Mode of Operation (GCM) </a></li>
+	  
+	  
+	  <li>Slides: <a href="/static/lectures/f21/BlockCipherModes.pdf">Block Cipher Modes</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Jan 20</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    </div>
+
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/homework/homework3">Homework #3</a></span>
+      </ul>
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Jan 21</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Cryptographic Hash Functions</span> 
+      <ul>
+	  
+	  <li>Reading: <a href="http://csrc.nist.gov/groups/ST/hash/index.html">NIST Hash Project </a></li>
+	  
+	  <li>Reading: <a href="https://www.schneier.com/blog/archives/2005/02/cryptanalysis_o.html">Chinese researchers find first SHA-1 collision 2005</a></li>
+	  
+	  <li>Reading: <a href="https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html">Google announces practical collision SHA-1, Feb 2017</a></li>
+	  
+	  
+	  <li>Slides: <a href="/static/lectures/f21/CryptographicHashFunctions.pdf">Cryptographic Hash Functions</a></li>
+	  
+      </ul>
+
+      <span class="section">Hash Attack</span> 
+      <ul>
+	  
+	  <li>Slides: <a href="https://docs.google.com/presentation/d/1i2TvaLXZjWtZubOm-7sNVrbmnNg3ji1fQ9XmaWzE_n8/edit?usp=sharing">Hash Attack Discussion</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+<h2 class="plain">Week 4</h2>
+
+<div class="schedule">
+
+  <div class="day">Jan 24</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Message Authentication Codes (MAC)</span> 
+      <ul>
+	  
+	  <li>Reading: <a href="/static/pubs/fips180-3_final.pdf">SHA-1 spec</a></li>
+	  
+	  <li>Reading: <a href="https://blog.cryptographyengineering.com/2013/02/15/why-i-hate-cbc-mac/">Why I hate CBC-MAC </a></li>
+	  
+	  
+	  <li>Slides: <a href="/static/lectures/f21/MAC.pdf">MAC</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Jan 25</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/projects/project2">Project #2: Hash Attack</a></span>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Jan 26</div>
+
+  <div class="row content">
+    <div class="col-sm">
+      
+      <span class="section">Recap Hash Attack, Discuss MAC Attack</span> 
+      <ul>
+	  
+	  <li>Slides: <a href="https://docs.google.com/presentation/d/19HfSDfiPJxaC-snRp-C2gw466UzeYlOtPEpeh2679CE/edit?usp=sharing">MAC Attack Discussion</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Jan 28</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">No Class: Work on MAC Attack HW & Project #3</span> 
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/homework/homework4">Homework #4</a></span>   
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<h2 class="plain">Week 5</h2>
+
+<div class="schedule">
+
+  <div class="day">Jan 31</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Public-Key Cryptography</span> 
+      <ul>
+	  
+	  
+	  <li>Slides: <a href="/static/lectures/f21/Diffie-Hellman.pdf">Intro + Diffie-Hellman</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Feb 1</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+        <span class="due">Due: <a href="/winter-2022/projects/project3">Project #3: MAC Attack</a></span>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Feb 2</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Diffie-Hellman</span> 
+      <ul>
+	  
+	  
+	  <li>Slides: <a href="/static/lectures/f21/Diffie-Hellman.pdf">Diffie-Hellman</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Feb 4</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">RSA Part 1</span> 
+      <ul> 
+	  <li>Slides: <a href="/static/lectures/f21/RSA.pdf">RSA</a></li>
+	  <li><a href="https://soatok.blog/2021/01/20/please-stop-encrypting-with-rsa-directly/">Please Stop Encrypting with RSA Directly</a></li>
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+        <span class="due">Due: <a href="/winter-2022/homework/homework5">Homework #5</a></span>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<h2 class="plain">Week 6</h2>
+
+
+<div class="schedule">
+
+  <div class="day">Feb 7</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">RSA Part 2</span> 
+      <ul>
+	  
+	      <li>Slides: <a href="/static/lectures/f21/RSA.pdf">RSA</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+      
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Feb 8</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+        <span class="due">Due: <a href="/winter-2022/projects/project4">Project #4: Diffie-Hellman</a></span>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Feb 9</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Public Key Infrastructure: Digital Certificates and Signatures</span> 
+      <ul>
+	  
+	      <li>Slides: <a href="/static/lectures/f21/PKI.pdf">PKI</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Feb 11</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">No Class: Work on HW #6 and Project #5</span> 
+      
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+        <span class="due">Due: <a href="/winter-2022/homework/homework6">Homework #6</a></span>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<h2 class="plain">Week 7</h2>
+
+<div class="schedule">
+
+  <div class="day">Feb 14</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">In Class Review for Midterm Exam 1.</span> 
+      <ul>
+	  
+	  <li>Slides: <a href="https://docs.google.com/document/d/1Te0Z-AnMGX9aECaZQGG5kzO8hQKtWOO1a7ksLOzlYmY/">Midterm Exam 1 study guide</a></li>
+	  
+      </ul>
+
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+        <span class="due">Due: <a href="/winter-2022/homework/homework7">Homework #7</a></span>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Feb 15</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+      
+    <span class="due">Due: Midterm #1 (first day in Testing Center)</span>
+    
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Feb 16</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">No Class</span> 
+    
+    </div>
+    <div class="col-sm">
+      
+    <span class="due">Due: Midterm #1</span>
+    
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Feb 17</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+      
+    <span class="due">Due: Midterm #1 (last day in Testing Center)</span>
+    
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Feb 18</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Transport Layer Security (TLS)</span> 
+      <ul>
+	  
+	  <li>Reading: <a href="http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html">The First Few Milliseconds of an HTTPS Connection</a></li>
+	  
+	  <li>Reading: <a href="https://tls.ulfheim.net/">The Illustrated TLS Connection</a></li>
+	  
+	  
+	  <li>Slides: <a href="/static/lectures/f21/TLS-2020.pdf">TLS</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Feb 19</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+<h2 class="plain">Week 8</h2>
+
+<div class="schedule">
+
+  <div class="day">Feb 21</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Holiday --- No class</span> 
+      <ul>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+        <span class="due">Due: <a href="/winter-2022/homework/homework8">Homework #8</a></span>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Feb 22</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Logjam TLS Attack</span> 
+      <ul>
+	  
+        <li>Reading: <a href="https://weakdh.org/">Weak Diffie-Hellman and the Logjam Attack</a></li>
+	      <li>Reading: <a href="https://www.cryptologie.net/article/340/tls-pre-master-secrets-and-master-secrets/">TLS, Pre-Master Secrets and Master Secrets</a></li>
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/projects/project5">Project #5: RSA</a></span>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Feb 23</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">TLS Wrap Up</span> 
+      <ul>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Feb 25</div>
+
+  <div class="row content">
+    <div class="col-sm">
+      <span class="section">No Class: Work on Project #6</span> 
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Feb 26</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+    <span class="due">Due: <a href="/winter-2022/projects/project6">Project #6: TLS</a></span>
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+<h2 class="plain">Week 9</h2>
+
+
+<div class="schedule">
+
+  <div class="day">Feb 28</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Midterm 1 Results Q/A</span> 
+        <ul>
+          <li>Hand back exams</li>
+          <li>Discuss commonly missed questions</li>
+        </ul>
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Mar 1</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section"></span> 
+      <ul>
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/homework/homework9">Homework #9</a></span>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Mar 2</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Passwords</span> 
+      <ul>
+	  
+	  <li>Reading: <a href="https://www.nist.gov/blogs/taking-measure/easy-ways-build-better-p5w0rd">Easy Ways to Build a Better P@$5w0rd (NIST)</a></li>
+	  
+	  <li>Reading: <a href="https://www.nytimes.com/2012/11/08/technology/personaltech/how-to-devise-passwords-that-drive-hackers-away.html">How to Devise Passwords That Drive Hackers Away</a></li>
+	  
+	  
+	  <li>Slides: <a href="/static/lectures/f21/Passwords.pdf">Passwords</a></li>
+	  
+      </ul>  
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Mar 4</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Guest Lecture from Industry</span> 
+      <ul>
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<h2 class="plain">Week 10</h2>
+
+
+<div class="schedule">
+
+  <div class="day">Mar 7</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Passwords Continued/Multi-factor Authentication and Password Managers</span> 
+      <ul>
+	  
+	  
+	  <li>Slides: <a href="/static/lectures/f21/Passwords.pdf">Passwords</a></li>
+	  
+	  <li>Slides: <a href="https://docs.google.com/presentation/d/1eqFB1IklngE5x2iEVxkU2q9cV-eFH7JJPF7TK9AE0BM/edit?usp=sharing">Multi-factor authentication and password vaults</a></li>
+	  
+    <li>Reading: <a href="https://www.microsoft.com/en-us/research/publication/an-administrators-guide-to-internet-password-research/">An Administrator's Guide to Password Research</a></li>
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Mar 8</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section"></span> 
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/projects/project7">Project #7: Password Cracking</a></span>
+    </ul>
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Mar 9</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Binary Layout/Exploitation and Buffer Overflows</span> 
+      <ul>
+	  
+	  <li>Reading: <a href="http://www.phrack.org/issues/49/14.html#article">Smashing the Stack For Fun and Profit</a></li>
+	  
+	  <li>Reading: <a href="https://travisf.net/smashing-the-stack-today">Smashing the Stack For Fun and Profit (Today)</a></li>
+	  
+	  <li>Reading: <a href="https://paulmakowski.wordpress.com/2011/01/25/smashing-the-stack-in-2011/">Smashing the Stack in 2011</a></li>
+	  
+	  <li>Reading: <a href="https://www.ethicalhacker.net/columns/heffner/smashing-the-modern-stack-for-fun-and-profit/">Smashing the Modern Stack for Fun and Profit</a></li>
+	  
+	  
+	  <li>Slides: <a href="https://docs.google.com/presentation/d/1FnqqExqirZTQYsI3kN_74OfyiQKBoIsNShXk2ApcNrI/edit#slide=id.p">Stack Frame Layout Simplified</a></li>
+	  
+	  <li>Slides: <a href="/static/lectures/f21/BufferOverflow.pdf">Buffer Overflow</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="schedule">
+
+  <div class="day">Mar 10</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section"></span> 
+      <ul>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/homework/homework11">Homework #11</a></span>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="schedule">
+
+  <div class="day">Mar 11</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Binary Layout/Exploitation and Buffer Overflows 2</span> 
+      <ul>
+	  
+	  <li>Reading: <a href="http://www.phrack.org/issues/49/14.html#article">Smashing the Stack For Fun and Profit</a></li>
+	  
+	  <li>Reading: <a href="https://travisf.net/smashing-the-stack-today">Smashing the Stack For Fun and Profit (Today)</a></li>
+	  
+	  <li>Reading: <a href="https://paulmakowski.wordpress.com/2011/01/25/smashing-the-stack-in-2011/">Smashing the Stack in 2011</a></li>
+	  
+	  <li>Reading: <a href="https://www.ethicalhacker.net/columns/heffner/smashing-the-modern-stack-for-fun-and-profit/">Smashing the Modern Stack for Fun and Profit</a></li>
+	  
+	  
+	  <li>Slides: <a href="https://docs.google.com/presentation/d/1FnqqExqirZTQYsI3kN_74OfyiQKBoIsNShXk2ApcNrI/edit#slide=id.p">Stack Frame Layout Simplified</a></li>
+	  
+	  <li>Slides: <a href="/static/lectures/f21/BufferOverflow.pdf">Buffer Overflow</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<h2 class="plain">Week 11</h2>
+
+<div class="schedule">
+
+  <div class="day">Mar 14</div>
+
+  <div class="row content">
+    <div class="col-sm">
+      
+      <span class="section">Encryption Backdoor Debate -- Read in advance and come to class with 3 to 5 points in favor or against government surveillance of encrypted traffic that you found compelling</span> 
+      <ul>
+        
+        
+        <li>Reading: <a href="Https://academic.oup.com/cybersecurity/article/1/1/69/2367066">Paper: Keys under doormats: Mandating insecurity by requiring government access to all data and communications</a></li>
+        
+        <li>Reading: <a href="https://www.lawfareblog.com/perspectives-encryption-and-surveillance">Perspectives on Encryption and Surveillance</a></li>
+        
+      </ul>
+      
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+      </ul>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="schedule">
+
+  <div class="day">Mar 15</div>
+
+  <div class="row content">
+    <div class="col-sm">
+
+      <span class="section"></span> 
+      <ul>
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <!--<span class="due">Due: <a href="/winter-2022/homework/homework10">Homework #10</a></span>-->
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="schedule">
+
+  <div class="day">Mar 16</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">No Class: Work on HW #10 and Project #9 </span> 
+      <ul>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/homework/homework10">Homework #10</a></span>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Mar 18</div>
+
+  <div class="row content">
+    <div class="col-sm">
+
+      <span class="section">Holiday --- no class</span> 
+      <ul>
+	  
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Mar 19</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/projects/project9">Project #9: Buffer Overflow</a></span>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<h2 class="plain">Week 12</h2>
+
+<div class="schedule">
+
+  <div class="day">Mar 21</div>
+
+  <div class="row content">
+    <div class="col-sm">
+
+      <span class="section">In Class Review for Midterm Exam 2.</span> 
+      <ul>
+        <li>Reading: <a href="https://docs.google.com/document/d/1HZtcQ4YfiKS62g9wICPhCPvmA0DPhzl7pT7JCm4St3s">Midterm Exam 2 study guide</a></li>
+	  
+      </ul>
+      
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Mar 22</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+      
+    <span class="due">Due: Midterm #2 (first day in Testing Center)</span>
+    
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Mar 23</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">No Class</span> 
+    
+    </div>
+    <div class="col-sm">
+      
+    <span class="due">Due: Midterm #2 </span>
+    
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Mar 24</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+      
+    <span class="due">Due: Midterm #2 (last day in Testing Center)</span>
+    
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Mar 25</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Guest Lecture from Industry</span> 
+      <ul>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+<h2 class="plain">Week 13</h2>
+
+
+<div class="schedule">
+
+  <div class="day">Mar 28</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Secure Email</span> 
+      <ul>
+	  
+        <li>Slides: <a href="/static/lectures/f21/SecureEmail.pdf">Secure Email</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Mar 29</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section"></span> 
+      <ul>	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/projects/project8">Project #8: Extracting Secrets</a></span>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="schedule">
+
+  <div class="day">Mar 30</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Secure Email Wrap Up</span> 
+      <ul>
+	  
+        <li>Slides: <a href="/static/lectures/f21/SecureEmail.pdf">Secure Email</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Apr 1</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">No Class: Work on HW #12 and Project #10</span> 
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        
+    </ul>
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+
+  <div class="day">Apr 2</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/homework/homework12">Homework #12</a></span>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<h2 class="plain">Week 14</h2>
+
+
+<div class="schedule">
+
+  <div class="day">Apr 4</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Midterm 2 Results Q/A</span> 
+        <ul>
+          <li>Hand back exams</li>
+          <li>Discuss commonly missed questions</li>
+        </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="schedule">
+
+  <div class="day">Apr 5</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section"></span> 
+      <ul>
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/projects/project10">Project #10: Secure Email</a></span>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Apr 6</div>
+
+  <div class="row content">
+    <div class="col-sm">
+    
+      <span class="section">Guest Lecture: Dr. Kent Seamons</span>
+        <ul>
+          <li>Research in Security at BYU</li>
+        </ul>
+
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+    
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Apr 8</div>
+
+  <div class="row content">
+    <div class="col-sm">
+     
+      <span class="section">Social Engineering</span> 
+      <ul>
+	  
+	  <li>Reading: <a href="https://bit.ly/2I9nKPW">Integer Manipulation Vulnerabilities: Microsoft Whitepaper</a></li>
+	  
+	  <li>Slides: <a href="/static/lectures/f21/social_engineering.pdf">Social Engineering</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+<h2 class="plain">Week 15</h2>
+
+<div class="schedule">
+
+  <div class="day">Apr 11</div>
+
+  <div class="row content">
+    <div class="col-sm">
+
+      <span class="section">Provable Security</span> 
+      <ul>
+	  
+	  <li>Video: <a href="https://www.youtube.com/watch?v=JfjLKBO27nw">Formal Reasoning about the Security of Amazon Web Services</a></li>
+    <li>Reading: <a href="https://www.brookings.edu/techstream/formal-methods-as-a-path-toward-better-cybersecurity/">Formal methods as a path towards better cybersecurity</a></li>
+	  
+      </ul>
+
+      <span class="section">Zero-Knowledge Proofs</span> 
+      <ul>
+	  
+	  <li>Just for fun we'll talk about this at a high-level</li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/homework/homework13">Homework #13</a></span>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="schedule">
+
+  <div class="day">Apr 13</div>
+
+  <div class="row content">
+    <div class="col-sm">
+
+      <span class="section">Trust & Rubber Ducky Demo</span> 
+      <ul>
+	
+	  <li>Reading: <a href="https://www.archive.ece.cmu.edu/~ganger/712.fall02/papers/p761-thompson.pdf">Reflections on Trusting Trust</a></li>
+	  
+      </ul>
+    
+    </div>
+    <div class="col-sm">
+      <span class="section">Assignments</span>
+      <ul>
+        <span class="due">Due: <a href="/winter-2022/projects/project11">Project #11: Extra Credit - last day for submission</a></span>
+    
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+	    </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="footer">
+      <div class="row">
+	<div id="license">
+	</div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+    <script>
+  </body>
+</html>
