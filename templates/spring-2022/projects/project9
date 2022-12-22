@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS 465 Computer Security</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Lora:700|Work+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="/static/css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid header">
+      <div class="row">
+	<div class="col-md-7 brand">
+	  <a href="/">CS 465 Computer Security</a>
+	</div>
+	<div class="col-md-5 affiliation">
+	  <a href="https://www.byu.edu">BYU</a> | <a
+	  href="https://cs.byu.edu">Computer Science</a>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-sm">
+	  <h1>
+Spring 2022
+</h1>
+	  <h4>
+Section 1: MWF, 10:00am - 12:00pm, HBLL 3718
+</h4>
+	</div>
+	</div>
+	</div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+  <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav mr-auto">
+	  
+
+
+
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/spring-2022/ >Syllabus</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/spring-2022/schedule >Schedule</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/spring-2022/lectures >Lecture Material</a>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="/homework" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Homework</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework1 >Homework #1</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework2 >Homework #2</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework3 >Homework #3</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework4 >Homework #4</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework5 >Homework #5</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework6 >Homework #6</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework7 >Homework #7</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework8 >Homework #8</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework9 >Homework #9</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework10 >Homework #10</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework11 >Homework #11</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework12 >Homework #12</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework13 >Homework #13</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Projects</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project1 >Project #1: AES</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project2 >Project #2: Hash Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project3 >Project #3: MAC Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project4 >Project #4: Diffie-Hellman</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project5 >Project #5: RSA</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project6 >Project #6: TLS</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project7 >Project #7: Password Cracking</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project8 >Project #8: Extracting Secrets</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project9 >Project #9: Buffer Overflow</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project10 >Project #10: S/MIME and PGP</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project11 >Project #11: CTF Extra Credit</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Help</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/instructor >Instructor and TAs</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/officehours >Office Hours</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/study-guide-midterm1 >Midterm 1 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/study-guide-midterm2 >Midterm 2 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/slack >Class Slack Channel</a>
+    </div>
+    </li>
+</ul>
+
+
+	</ul>
+      </div>
+    </div>
+    </nav>
+
+    <div id="page" class="white">
+    <div class="container-fluid">
+    <div class="row">
+          <div class="col-sm">
+
+	    
+
+<h1>Project 9: Buffer Overflow</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Conduct simple buffer overflow attacks against a vulnerable program
+from the command line</li>
+</ul>
+<h2>Files</h2>
+<p>You will need to download
+<a href="/static/files/stacksmashing/sample3.tar">sample3.tar</a> for this
+lab. You can untar this file with:</p>
+<pre><code>tar -xvf sample3.tar
+</code></pre>
+<h2>VM</h2>
+<p>The CS department has prepared a VM for each of you to be able to use
+on the lab machines or your own machine. You need to be connected to
+the CS network to download the VM. Alternatively, you can setup your
+own Linux VM.</p>
+<ol>
+<li><a href="https://docs.cs.byu.edu/doku.php?id=linux">download VM</a>, under the
+   CS Linux Virtual Machine section, getting the larger, newer Ubuntu 18
+   VM.  Run the VM using VMWare or VirtualBox. Log in using the
+   Username: student  Password: student</li>
+</ol>
+<p>Note that you can do the lab with the older smaller Ubuntu 16 VM, it is
+   smaller but harder to get running unless you ahve vmware installed
+   Username: cs-student Password: H@ckTheWorld!</p>
+<ol>
+<li>
+<p>In order to compile your program run the following commands in the
+terminal:</p>
+<ul>
+<li>sudo apt-get update</li>
+<li>sudo apt-get install libx32gcc-4.8-dev</li>
+<li>sudo apt-get install libc6-dev-i386  (this resolves the -m32 compile error)</li>
+<li>sudo apt-get install build-essential     </li>
+<li>sudo sysctl -w kernel.randomize_va_space=0 (this turns off address space randomization)</li>
+<li>sudo apt-get install execstack (this allows the stack to be executable)</li>
+</ul>
+</li>
+</ol>
+<p>IMPORTANT: Run the file <code>checkstack x</code>, which will print out a stack
+address and fail. Run it several times and verify that the stack
+address is the same each time you run it. If it changes, the stack
+randomization is turned on and if will be harder to complete the
+attack. Turn off stack randomization before continuing.</p>
+<h2>Compiler Flags</h2>
+<p>It is recommended you use the supplied binaries but if you need/want to recompile, use the following compiler flags.</p>
+<p>Compiler options must be used to turn off buffer overflow defenses.</p>
+<p>Use the following form of compiler options to compile example C
+programs:</p>
+<pre><code>gcc -g -m32 -fno-pie -fno-stack-protector -z execstack -o [executable file] [source file]
+</code></pre>
+<p>Here is how you compile the <code>auth_overflow3.c</code> program:</p>
+<pre><code>gcc -g -m32 -fno-pie -fno-stack-protector -z execstack -o auth_overflow3 auth_overflow3.c
+</code></pre>
+<h2>Section A</h2>
+<p>Goal: Gain access without a valid password.</p>
+<ol>
+<li>
+<p>Study the <code>auth_overflow1.c</code> program and see the valid passwords.</p>
+</li>
+<li>
+<p>Try different passwords to see if you can cause unexpected behavior (e.g. vary the length - to at least 35 characters).</p>
+<ul>
+<li>gain access without a valid password</li>
+<li>gain access without a valid password, then program crashes</li>
+<li>program crashes without gaining access</li>
+</ul>
+</li>
+<li>
+<p>Use the debugger and examine the stack to understand why the errors
+occur. Be able to explain how the stack works, including <code>ebp</code>, <code>esp</code>,
+<code>return address</code>, and <code>local variables</code>.</p>
+</li>
+</ol>
+<p>Note, changing the code as shown in <code>auth_overflow2.c</code> doesn’t fix the problem.
+This compiler places local variables on the stack in the same order.</p>
+<p>For this section, turn in a paragraph explaining what passwords worked for each case and 
+why. Include a printout of the stack with labels showing where the saved return address and local 
+variables are located. You can use <code>x/16xw $sp</code> to display the stack in gdb.</p>
+<h2>Section B</h2>
+<p>Goal: Use the debugger to obtain access by overwriting the return
+address.</p>
+<ol>
+<li>
+<p>Study <code>auth_overflow3.c</code>, run <code>authoverflow3</code> to test it.</p>
+</li>
+<li>
+<p>This program no longer provides access for an invalid password.</p>
+</li>
+<li>
+<p>Use the debugger to force the program to grant access without a
+valid password.</p>
+<ul>
+<li>overwrite the return address on the stack</li>
+<li>use <code>disassemble main</code> to determine a new return address granting access</li>
+</ul>
+</li>
+</ol>
+<p>For this section, turn in a paragraph explaining how you wrote a new return address on the
+stack. Include a screenshot of you doing this and then getting access.</p>
+<h2>Section C</h2>
+<p>Goal: Gain access using only the command line.</p>
+<ol>
+<li>Now cause the program to grant access without using the debugger.</li>
+<li>
+<p>Input data on the command line so that access is granted.</p>
+<ul>
+<li>Overwrite return address on the stack</li>
+<li>Program will crash after access is granted. That is ok. Damage is done.</li>
+</ul>
+</li>
+</ol>
+<p>For this section, turn in a screenshot showing you doing this.</p>
+<h2>Section D</h2>
+<p>Goal: Inject shellcode on the stack and execute it.</p>
+<ol>
+<li>
+<p>Compile and run <code>shellcode5.c</code> to verify it works on your platform.  You can run the
+    <code>shellcode5</code> binary to see if it invokes a new shell. Your command prompt should change if it
+    runs successfully.</p>
+<ul>
+<li>The binary shellcode is also included in shellcode5.bin.</li>
+<li>This is the binary data you must place on the stack.</li>
+<li>You can add <code>cat shellcode5.bin</code> on the command line to insert this in the pw parameter.</li>
+</ul>
+<p><code>./auth_overflow3 `perl -e 'print "cougars" . "\x90" x 200'``cat shellcode5.bin`</code></p>
+</li>
+<li>
+<p>Now input the shellcode and cause it to be executed. </p>
+<ul>
+<li>You may need to use a NOP sled. See an example in shellcode5nop.bin</li>
+<li>Use the debugger to estimate the address used to overwrite the return address.</li>
+<li>You may need to use Perl to help you enter the binary data as a string.</li>
+</ul>
+</li>
+</ol>
+<p>For this section, turn in a short paragraph explaining what you did and why it worked.  Include a
+printout of the stack with labels showing how your shellcode and NOP sled are placed. Include a
+screenshot showing this working.</p>
+<p>(clarification - use the debugger to help you estimate where the return address goes, then without the debugger at all, successfully exploit from the command line, and once you have that working, bring it back up in the debugger to generate a printout to show the stack with labels, colors etc...)</p>
+<h3>How to input shellcode on the command line using perl</h3>
+<p>Use Perl to generate strings (with repeated patterns).</p>
+<pre><code>perl -e 'print &quot;AAAAAAAA&quot;'
+perl -e 'print &quot;AAAA&quot; . &quot;BBBB&quot;'
+perl -e 'print &quot;AAAA&quot; x 4'
+perl -e 'print &quot;\xf0\xd0\xff\xff&quot;'   (to enter address xffffd0f0, notice address backwards - little endian)
+perl -e 'print &quot;\xf0\xd0\xff\xff&quot;x20'    (repeat address 20 times)
+perl -e 'print &quot;\x90&quot; x 200'                   (NOP repeated 200 times)
+</code></pre>
+<p>Do not include <code>\x00</code> in an address since it will be treated as a string
+terminator</p>
+<p>Example of how to enter a password argument on the command line using
+Perl -- surround with left tick to execute the Perl and provide the argument:</p>
+<pre><code>./auth_overflow3 `perl -e 'print &quot;this is the place&quot;'`
+</code></pre>
+<h2>Submission</h2>
+<p>Submit a PDF of your report on Learning Suite, including all the things asked for in each section.</p>
+
+
+	    </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="footer">
+      <div class="row">
+	<div id="license">
+	</div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+    <script>
+  </body>
+</html>

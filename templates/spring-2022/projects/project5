@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS 465 Computer Security</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Lora:700|Work+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="/static/css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid header">
+      <div class="row">
+	<div class="col-md-7 brand">
+	  <a href="/">CS 465 Computer Security</a>
+	</div>
+	<div class="col-md-5 affiliation">
+	  <a href="https://www.byu.edu">BYU</a> | <a
+	  href="https://cs.byu.edu">Computer Science</a>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-sm">
+	  <h1>
+Spring 2022
+</h1>
+	  <h4>
+Section 1: MWF, 10:00am - 12:00pm, HBLL 3718
+</h4>
+	</div>
+	</div>
+	</div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+  <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav mr-auto">
+	  
+
+
+
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/spring-2022/ >Syllabus</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/spring-2022/schedule >Schedule</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/spring-2022/lectures >Lecture Material</a>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="/homework" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Homework</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework1 >Homework #1</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework2 >Homework #2</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework3 >Homework #3</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework4 >Homework #4</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework5 >Homework #5</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework6 >Homework #6</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework7 >Homework #7</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework8 >Homework #8</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework9 >Homework #9</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework10 >Homework #10</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework11 >Homework #11</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework12 >Homework #12</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework13 >Homework #13</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Projects</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project1 >Project #1: AES</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project2 >Project #2: Hash Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project3 >Project #3: MAC Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project4 >Project #4: Diffie-Hellman</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project5 >Project #5: RSA</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project6 >Project #6: TLS</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project7 >Project #7: Password Cracking</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project8 >Project #8: Extracting Secrets</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project9 >Project #9: Buffer Overflow</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project10 >Project #10: S/MIME and PGP</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project11 >Project #11: CTF Extra Credit</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Help</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/instructor >Instructor and TAs</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/officehours >Office Hours</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/study-guide-midterm1 >Midterm 1 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/study-guide-midterm2 >Midterm 2 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/slack >Class Slack Channel</a>
+    </div>
+    </li>
+</ul>
+
+
+	</ul>
+      </div>
+    </div>
+    </nav>
+
+    <div id="page" class="white">
+    <div class="container-fluid">
+    <div class="row">
+          <div class="col-sm">
+
+	    
+
+<h1>Project 5: RSA</h1>
+<h2>Objectives</h2>
+<p>In this lab you will develop a fully functional implementation of
+RSA. You will gain experience with finding multiplicative inverses and
+more practice with modular exponentiation.</p>
+<h2>Background</h2>
+<p>In the Diffie-Hellman lab, you wrote your own modular exponentiation
+function. We'll be using it a lot in this lab.</p>
+<h3>RSA encryption and signing</h3>
+<p>Encryption and decryption are just a matter of taking your message or
+ciphertext $m$ (less than $n$) and computing $m^e \bmod n$ or $m^d
+\bmod n$.  $n$ is called the public modulus, $e$ the public exponent
+and $d$ the private exponent. $n$ and $e$ together form the public
+key. $n$ and $d$ together form the private key. $e$ is currently
+conventionally set to 65537 because it's cheap to compute as a modular
+exponent.</p>
+<p>Encryption and decryption work because $(m^e)^d = m^ed = m (\bmod
+n)$. $e$ and $d$ are chosen so that their product is equal to a
+multple of $\phi(n)$ plus 1, that is to say: $e * d = 1 ( mod \phi(n)
+)$, or $e * d = k * \phi(n) + 1$ for some (unimportant) value of
+$k$. See the slides on RSA for details of why this is.</p>
+<p>Given $(m^e) \bmod n$, it's hard to compute $m$ unless you know
+$\phi(n)$ (in which case you can calculate $d$). Computing $\phi(n)$
+is hard unless you know the factorization of $n$. To ensure that
+factoring $n$ is hard, we make it the product of 2 large random
+primes.</p>
+<p>Signing is just encryption with the private exponent (what we normally
+consider decryption). The receiver can “decrypt” the signature with
+the public key to and verify that it matches the document. Since only
+the owner of the key knows $d$, only she can sign documents.</p>
+<h3>Calculating an RSA keypair</h3>
+<p>$e$ is conventionally set to 65537 (as long as it is relatively prime
+to $\phi(n)$), so we just need to compute $d$ and $n$. As we
+mentioned, n should be selected as the product of two large primes,
+$p$ and $q$. To compute $d$, recall that it must be chosen such that
+$ed = 1 \bmod \phi(n)$. But this just means that $d$ is $e$'s
+multiplicative inverse modulo $\phi(n)$. $\phi(n)$ is just
+$(p-1)(q-1)$ since $n$ only has two factors, $p$ and $q$. We can use
+the extended Euclidian algorithm to compute modular inverses.</p>
+<h3>Euclid's Algorithm</h3>
+<p>To test whether two numbers are relatively prime, you can use
+<a href="https://en.wikipedia.org/wiki/Euclidean_algorithm">Euclid's
+Algorithm</a>.  You
+will find pseudocode for several implementations on the Wikipedia
+page.</p>
+<h3>Generating primes</h3>
+<p>For the purposes of this lab, you are free to use any available
+resource for generating your primes. OpenSSL provides a way to
+generate primes, and many programming languages (such as Java) have
+ways of generating large primes. This should be familiar to you from
+the Diffie-Hellman lab.</p>
+<p>There are several tests which are used to find large prime
+numbers. Most of them are probabilistic; they'll tell you if a number
+is certainly composite, but can't tell for sure whether a number is
+prime. The Miller-Rabin test is probably the most respected of the
+probabilistic algorithms. OpenSSL uses Miller-Rabin primality testing
+to generate it's primes.</p>
+<h3>Computing multiplicative inverses</h3>
+<p>The extended Euclidian algorithm is often used to compute
+multiplicative inverses modulo some number. In this lab you will
+implement it to find $d$. Remember that the method for computing the
+$d$ by hand is somewhat different than what you will want to do on the
+computer. The <a href="https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm">Wikipedia page on the extended Euclidean
+algorithm</a>
+has pseudocode for computing modular inverses that may be useful.</p>
+<h2>Requirements</h2>
+<p>Restrictions: You may use the language of your choice for this
+lab. You may use a bignum library as in the Diffie-Hellman lab. You
+may not use any built-in modular exponentiation, multiplicative
+inverse, Euclid's algorithm, etc., but you may use code to help you
+generate your prime numbers $p$ and $q$.</p>
+<ul>
+<li>
+<p>Generate 2 512-bit primes $p$ and $q$. Ensure that their high order bit
+  is set. Verify that $(p-1)(q-1)$ is relatively prime to 65537 (which
+  we will be using for $e$). If it isn't, choose new $p$ and $q$
+  values.</p>
+</li>
+<li>
+<p>Using $n=pq$ and $e=65537$, calculate the secret exponent $d$, such
+    that $ed=1 \bmod \phi(n)$.  Verify that for numbers $m$ less than
+   $n$, $((m^e \bmod n)^d )\bmod n == m$.</p>
+</li>
+<li>
+<p>On the passoff webpage, you will be given a value to encrypt. Use
+  modular exponentation ($m^e \bmod n$) to encrypt the value.</p>
+</li>
+<li>
+<p>On the passoff webpage, you will be given a value to decrypt. Use
+  modular exponentation ($m^d \bmod n$) to decrypt the value.</p>
+</li>
+</ul>
+<h2>Passoff</h2>
+<p>There is a <a href="https://grader.cs465.byu.edu/rsa">passoff website</a></p>
+<h2>Submission</h2>
+<p>Submit a zip or gzip file that contains:</p>
+<ol>
+<li>
+<p>Your source code.</p>
+</li>
+<li>
+<p>Instructions for compiling (if needed) and running your code.</p>
+</li>
+<li>
+<p>Screenshots of your successful submission to the website,
+   including every step.</p>
+</li>
+</ol>
+
+
+	    </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="footer">
+      <div class="row">
+	<div id="license">
+	</div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+    <script>
+  </body>
+</html>
