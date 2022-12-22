@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS 465 Computer Security</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Lora:700|Work+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="/static/css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid header">
+      <div class="row">
+	<div class="col-md-7 brand">
+	  <a href="/">CS 465 Computer Security</a>
+	</div>
+	<div class="col-md-5 affiliation">
+	  <a href="https://www.byu.edu">BYU</a> | <a
+	  href="https://cs.byu.edu">Computer Science</a>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-sm">
+	  <h1>
+Spring 2022
+</h1>
+	  <h4>
+Section 1: MWF, 10:00am - 12:00pm, HBLL 3718
+</h4>
+	</div>
+	</div>
+	</div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+  <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav mr-auto">
+	  
+
+
+
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/spring-2022/ >Syllabus</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/spring-2022/schedule >Schedule</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/spring-2022/lectures >Lecture Material</a>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="/homework" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Homework</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework1 >Homework #1</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework2 >Homework #2</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework3 >Homework #3</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework4 >Homework #4</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework5 >Homework #5</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework6 >Homework #6</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework7 >Homework #7</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework8 >Homework #8</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework9 >Homework #9</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework10 >Homework #10</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework11 >Homework #11</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework12 >Homework #12</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework13 >Homework #13</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Projects</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project1 >Project #1: AES</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project2 >Project #2: Hash Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project3 >Project #3: MAC Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project4 >Project #4: Diffie-Hellman</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project5 >Project #5: RSA</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project6 >Project #6: TLS</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project7 >Project #7: Password Cracking</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project8 >Project #8: Extracting Secrets</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project9 >Project #9: Buffer Overflow</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project10 >Project #10: S/MIME and PGP</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project11 >Project #11: CTF Extra Credit</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Help</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/instructor >Instructor and TAs</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/officehours >Office Hours</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/study-guide-midterm1 >Midterm 1 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/study-guide-midterm2 >Midterm 2 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/slack >Class Slack Channel</a>
+    </div>
+    </li>
+</ul>
+
+
+	</ul>
+      </div>
+    </div>
+    </nav>
+
+    <div id="page" class="white">
+    <div class="container-fluid">
+    <div class="row">
+          <div class="col-sm">
+
+	    
+
+<h1>Homework #3</h1>
+<p>You may study the modes together, but please work out these answers on
+your own. Summative Grading Assignment.</p>
+<p>Complete each question described below. When comparing blocks of
+ciphertext or plaintext, if corresponding blocks differ then mention
+which specific blocks differ. If they differ by only 1 bit, mention
+that fact specifically. If they differ by more than 1 bit, simply
+state the specific blocks that differ completely. If all blocks differ
+in the full ciphertext, simply state that there is no relationship. Be
+as precise as you can in your comparisons to illustrate that you
+understand the various modes.</p>
+<ol>
+<li>
+<p>Suppose two plaintext samples P and Q are encrypted using a block
+cipher with the same secret key K and the same initialization vector
+IV (or nonce) for those modes that require it. Suppose each plaintext
+sample is divided into 100 blocks (including padding). If all the
+plaintext blocks of P and Q are the same, except for block 10, in
+which they differ by 1 bit, compare the corresponding ciphertext for
+each block cipher mode</p>
+<ul>
+<li>ECB</li>
+<li>CBC</li>
+<li>CTR</li>
+<li>CFB</li>
+<li>OFB</li>
+</ul>
+</li>
+<li>
+<p>Same as #1, except assume P and Q are encrypted with a different IV
+(nonce) as recommended by cryptographers.</p>
+<ul>
+<li>ECB</li>
+<li>CBC</li>
+<li>CTR</li>
+<li>CFB</li>
+<li>OFB</li>
+</ul>
+</li>
+<li>
+<p>Suppose two ciphertext samples P and Q are decrypted using key K
+and the same IV (or nonce) when required. Suppose each ciphertext
+sample of 100 blocks differs by 1 bit in block 25 only. Compare the
+corresponding plaintext blocks following decryption of P and Q for
+each block cipher mode.</p>
+<ul>
+<li>ECB</li>
+<li>CBC</li>
+<li>CTR</li>
+<li>CFB</li>
+<li>OFB</li>
+</ul>
+</li>
+<li>
+<p>Assume each ciphertext block is stored on a separate disk block
+that can be accessed independently. Suppose only block 50 of an
+encrypted file of 100 blocks needs to be accessed. Which specific
+blocks of ciphertext must be accessed to obtain the plaintext for
+block 50 for the following modes?</p>
+<ul>
+<li>ECB</li>
+<li>CBC</li>
+<li>CTR</li>
+<li>CFB</li>
+<li>OFB</li>
+</ul>
+</li>
+<li>
+<p>Which modes permit parallel encryption?</p>
+</li>
+<li>
+<p>Which modes permit parallel decryption?</p>
+</li>
+<li>
+<p>Which modes permit pre-computation of the key stream?</p>
+</li>
+</ol>
+<h2>Submit</h2>
+<p>Submit a pdf with your answers to learningsuite.</p>
+
+
+	    </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="footer">
+      <div class="row">
+	<div id="license">
+	</div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+    <script>
+  </body>
+</html>

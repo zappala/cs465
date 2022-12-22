@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS 465 Computer Security</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Lora:700|Work+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="/static/css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid header">
+      <div class="row">
+	<div class="col-md-7 brand">
+	  <a href="/">CS 465 Computer Security</a>
+	</div>
+	<div class="col-md-5 affiliation">
+	  <a href="https://www.byu.edu">BYU</a> | <a
+	  href="https://cs.byu.edu">Computer Science</a>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-sm">
+	  <h1>
+Spring 2022
+</h1>
+	  <h4>
+Section 1: MWF, 10:00am - 12:00pm, HBLL 3718
+</h4>
+	</div>
+	</div>
+	</div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+  <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav mr-auto">
+	  
+
+
+
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/spring-2022/ >Syllabus</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/spring-2022/schedule >Schedule</a>
+</li>
+
+
+
+
+<li class="nav-item ">
+<a class="nav-link" href=/spring-2022/lectures >Lecture Material</a>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="/homework" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Homework</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework1 >Homework #1</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework2 >Homework #2</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework3 >Homework #3</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework4 >Homework #4</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework5 >Homework #5</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework6 >Homework #6</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework7 >Homework #7</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework8 >Homework #8</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework9 >Homework #9</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework10 >Homework #10</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework11 >Homework #11</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework12 >Homework #12</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/homework/homework13 >Homework #13</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Projects</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project1 >Project #1: AES</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project2 >Project #2: Hash Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project3 >Project #3: MAC Attack</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project4 >Project #4: Diffie-Hellman</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project5 >Project #5: RSA</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project6 >Project #6: TLS</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project7 >Project #7: Password Cracking</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project8 >Project #8: Extracting Secrets</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project9 >Project #9: Buffer Overflow</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project10 >Project #10: S/MIME and PGP</a>
+    
+
+
+
+<a class="dropdown-item" href=/spring-2022/projects/project11 >Project #11: CTF Extra Credit</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Help</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/instructor >Instructor and TAs</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/officehours >Office Hours</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/study-guide-midterm1 >Midterm 1 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/study-guide-midterm2 >Midterm 2 Study Guide</a>
+    
+
+
+
+
+
+<a class="dropdown-item" href=/spring-2022/help/slack >Class Slack Channel</a>
+    </div>
+    </li>
+</ul>
+
+
+	</ul>
+      </div>
+    </div>
+    </nav>
+
+    <div id="page" class="white">
+    <div class="container-fluid">
+    <div class="row">
+          <div class="col-sm">
+
+	    
+
+<h1>Project 8: Extracting Secrets</h1>
+<h2>Objectives</h2>
+<p>In this project you will learn about the fundamental difficulties in
+restricting what users can do with the data on their computers. You
+will also:</p>
+<ul>
+<li>
+<p>Learn how any traditional content restriction mechanism can be
+easily circumvented.</p>
+</li>
+<li>
+<p>Learn how "protected" data can be easily extracted from any
+application.</p>
+</li>
+</ul>
+<h2>Overview</h2>
+<p>For many years, software companies have tried to restrict what users
+may do with the applications they buy. Often, these efforts have
+focused on preventing users from running applications on more than one
+computer. More recently, they've tried to restrict what users may do
+with data such as video, audio and even text.</p>
+<p>In 1998, congress passed the Digital Millenium Copyright Act. Among
+other things, it specifies that "No person shall circumvent a
+technological measure that effectively controls access to a work
+protected under this title." The problem with this clause as it
+relates to computers is that in their present state, no technological
+measures can effectively prevent a computer owner from accessing the
+data on his own machine!</p>
+<h2>Requirements</h2>
+<ol>
+<li>
+<p>Download <a href="/static/files/secrets/fortune_static">fortune_static</a>, a
+   statically linked Linux executable, and
+   <a href="/static/files/secrets/fortunes.enc">fortunes.enc</a>, a file with
+   encrypted content. When you run <code>fortune_static</code>, it will ask you
+   for the "CD key," a password designed to restrict access to the
+   program. You will not be given a valid CD key.</p>
+</li>
+<li>
+<p>Use a debugger to bypass this password mechanism and make the
+   program function normally. Instead of exiting, it will print out a
+   random quote from the file <code>fortunes.enc</code>. This is done by modifying
+   variables, registers, return addresses, etc. using the
+   debugger. (See the ddd manual or gdb manual for help)</p>
+</li>
+<li>
+<p>Now that you understand the code, open the executable in a hex
+   editor (e.g., bless, vim) and modify the assembly code so that you
+   can obtain a fortune every time you run the program. Perhaps any CD
+   key that you enter will now work, for instance. You may be able to
+   insert noops (0x90) to effectively crack the
+   executable. Dr. Seamons was able to do this by modifying just one
+   byte in the executable using vim as a hex editor. The result will
+   be a new executable file that you can run and obtain a fortune.</p>
+</li>
+<li>
+<p>Find a way to obtain all of the plaintext fortunes from
+fortunes.enc using the debugger.</p>
+</li>
+</ol>
+<h2>Tips</h2>
+<p>To run <code>fortune_static</code> on a Linux machine, be sure it is set to be
+executable. You can do this with:</p>
+<pre><code>chmod u+x fortune_static
+</code></pre>
+<p>To disassemble <code>fortune_static</code> while keeping the hex values for each
+instruction that is executed, use the following command in the
+terminal:</p>
+<pre><code>objdump -d fortune_static &gt; dump.txt
+</code></pre>
+<p>This will disassemble the entire program and store the result in the file dump.txt</p>
+<h2>Report</h2>
+<p>Generate a written report for the lab that addresses the following items. Please number each item for clarity.</p>
+<ol>
+<li>
+<p>How did you use the debugger to bypass the password mechanism?
+    What variables did you modify? Please include a screenshot of the
+    debugger in your report.</p>
+</li>
+<li>
+<p>How did you edit the program to bypass the cdkey mechanism?</p>
+</li>
+<li>
+<p>How did you obtain all the fortunes from the encrypted file?</p>
+</li>
+</ol>
+<p>Include the following in your report.</p>
+<ul>
+<li>
+<p>a plain text section containing the list of all fortunes from the
+  fortunes.enc file</p>
+</li>
+<li>
+<p>a screenshot of the debugger that shows you were able to access the
+  plain text fortunes in memory.</p>
+</li>
+</ul>
+<h2>NOTE:</h2>
+<ul>
+<li>Using probabilistic methods to extract all the fortunes will not receive full credit.  You should include a brief description of what you did to ensure that you have extracted all the fortunes.  A NOT acceptable description would be "I ran the program 1000 times and collected all the unique outputs."  An example of an acceptable solution would be "I used the debugger to change the output of the random number generator sequentially walking through all possibilities." or "I extracted the key that was used to encrypt the fortune file and decrypted it." or "I found where the decrypted fortunes were in memory and printed them all from there from the debugger." There are other possible methods of doing this which are likely acceptable. </li>
+</ul>
+<h2>Submission</h2>
+<p>Submit a PDF of your report on Learning Suite, including all the
+things asked for in each section.</p>
+
+
+	    </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="footer">
+      <div class="row">
+	<div id="license">
+	</div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+    <script>
+  </body>
+</html>
