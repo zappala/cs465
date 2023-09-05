@@ -49,7 +49,7 @@ def fall2023schedule():
 
     #week 3
     s.week()
-    d = s.day("Sept 21")
+    d = s.day("Sept 19")
     d.assignment("Homework #3",term + 'homework/homework3')
     d.lecture("Cryptographic Hash Functions")
     d.slide("Cryptographic Hash Functions",static + 'CryptographicHashFunctions.pdf')
@@ -58,13 +58,13 @@ def fall2023schedule():
     d.reading("Google announces practical collision SHA-1, Feb 2017","https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html")
     d.slide("Class Slides for Hash Attack Discussion","https://docs.google.com/presentation/d/1i2TvaLXZjWtZubOm-7sNVrbmnNg3ji1fQ9XmaWzE_n8/edit?usp=sharing")
 
-    d = s.day("Sept 22")
+    d = s.day("Sept 21")
     d.lecture("Message Authentication Codes - MAC")
     d.reading("SHA-1 spec",pubs + 'fips180-3_final.pdf')
     d.reading("Why I hate CBC-MAC (Optional)","https://blog.cryptographyengineering.com/2013/02/15/why-i-hate-cbc-mac/")
     d.slide("MAC",static + "MAC.pdf")
 
-    d = s.day("Sept 23")
+    d = s.day("Sept 22")
     d.assignment("Project #2: Hash Attack", term + 'projects/project2')
 
     #week 4
