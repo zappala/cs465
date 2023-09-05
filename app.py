@@ -2,6 +2,7 @@
 
 import sys
 
+from views import fall2023
 from views import winter2023
 from views import fall2022
 from views import fall2021
