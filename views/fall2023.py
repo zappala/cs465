@@ -49,7 +49,7 @@ def fall2023schedule():
 
     #week 3
     s.week()
-    d = s.day("Sept 1")
+    d = s.day("Sept 21")
     d.assignment("Homework #3",term + 'homework/homework3')
     d.lecture("Cryptographic Hash Functions")
     d.slide("Cryptographic Hash Functions",static + 'CryptographicHashFunctions.pdf')
