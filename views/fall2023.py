@@ -76,8 +76,10 @@ def fall2023schedule():
     d.assignment("Homework #4",term + 'homework/homework4')
 
     d = s.day("Sept 28")
-    d.lecture("Diffie-Hellman")
-    d.slide("Diffie-Hellman",static + "Diffie-Hellman.pdf")
+    d.lecture("Guest Lecture - Jeff Anderson w/Google - Recovering from Vulnerabilities through Applied Crypto")
+
+    #d.lecture("Diffie-Hellman")
+    #d.slide("Diffie-Hellman",static + "Diffie-Hellman.pdf")
     
     d = s.day("Sept 29")
     d.assignment("Project #3: MAC Attack", term + 'projects/project3')
@@ -85,16 +87,17 @@ def fall2023schedule():
     #week 5
     s.week()
     d = s.day("Oct 3")
-    d.lecture("RSA Part 1")
+    d.lecture("Diffie Hellman, then RSA Part 1")
     d.slide("RSA",static + "RSA.pdf")
-    d.assignment("Homework #5",term + 'homework/homework5')
+    d.slide("Diffie-Hellman",static + "Diffie-Hellman.pdf")
 
     d = s.day("Oct 5")
+    d.assignment("Homework #5 (diffie hellman)",term + 'homework/homework5')
     d.lecture("RSA Part 2")
     d.slide("RSA",static + "RSA.pdf")
 
     d = s.day("Oct 6")
-    d.assignment("Project #4: Diffie-Hellman", term + 'projects/project4')
+    d.assignment("Project #4: Diffie-Hellman - Due Date may vary - TBA", term + 'projects/project4')
 
     #week 6
     s.week()
