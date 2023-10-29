@@ -121,6 +121,14 @@ Throughout this project, I will refer to a few important terms. Here are brief e
 
     for Hashcat.
 
+4. Create 4 unique random passwords of increasing difficulty (easy, medium, hard, 16 character random alphameric). Encrypt each password twice, each time with a different salt. Put the resulting 8 hashes in a file and try to crack them using John the Ripper or Hashcat. Make sure they are in normal linux password file format e.g. ``` $1$qsxI/VDi$ueW5zV5V5zj9CjwjyaR3f1 ```.    Make sure that you understand any new configuration you'll need for your password cracking program to crack hashes in this format.
+
+Write about your experience. Were you able to crack them all? Which ones (if any) were you not able to crack?  What effect does a new salt have on your hash and password guessing?  Include your hashes and passwords in your writeup.
+
+Here are some resources to help you generate password hashes:
+* [DES and MD5](https://unix4lyfe.org/crypt/)
+* [Manually Generate Password for etc/shadow](https://unix.stackexchange.com/questions/81240/manually-generate-password-for-etc-shadow)
+
 
 
 4. Answer the following questions:
