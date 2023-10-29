@@ -3,13 +3,12 @@
 {% block page %}
 
 {% filter markdown %}
-
-##### NEEDS TO BE UPDATED - do not do this as shown for 2023
-##### NEEDS TO BE UPDATED - do not do this as shown for 2023
-##### NEEDS TO BE UPDATED - do not do this as shown for 2023
-##### NEEDS TO BE UPDATED - do not do this as shown for 2023
-##### NEEDS TO BE UPDATED - do not do this as shown for 2023
 # Project 8: Extracting Secrets
+
+## Preliminary Setup
+
+This project is can be completed by running virtual machine that we have prebuilt for you.  You can find the details of how to get it up and runing  [HERE](/fall-2023/projects/virtual_machine_setup) </b>.  You are welcome to install the virtual machine on inside your CS account, or anywhere you have access to a commputer that you can run virtualbox on.  You can also install the software manually on any linux system you have administrative access to.  
+
 
 ## Objectives
 
@@ -17,10 +16,9 @@ In this lab you will learn about the fundamental difficulties in
 restricting what users can do with the data on their computers. You
 will also:
 
-* Learn how any traditional content restriction mechanism can be
-easily circumvented.
+* Learn how any traditional content restriction mechanism can be circumvented.
 
-* Learn how "protected" data can be easily extracted from any
+* Learn how "protected" data can be extracted from any
 application.
 
 ## Overview
@@ -39,80 +37,92 @@ relates to computers is that in their present state, no technological
 measures can effectively prevent a computer owner from accessing the
 data on his own machine!
 
+As you go out into the workforce, many of you will be responsible for protecting important data. This data could range from company secrets to personal medical history. Software you write will have to be able to withstand attacks in a hostile environment. As you learn more about security measures and how they can be circumvented, take note of what does and doesn't work.
+
 ## Requirements
 
-1. Download [fortune_static](/static/files/secrets/fortune_static), a
-   statically linked Linux executable, and
-   [fortunes.enc](/static/files/secrets/fortunes.enc), a file with
-   encrypted content. When you run `fortune_static`, it will ask you
-   for the "CD key," a password designed to restrict access to the
-   program. You will not be given a valid CD key.
+1. For this project, you will be using the following 2 files  
+   * [secret_treasure](/static/files/secret_treasure), a Linux executable
+   * [treasures.enc](/static/files/treasures.enc), an encrypted file  
+     You can download them from these links or they are already preloaded in the virtual machine.
 
-1. Use a debugger to bypass this password mechanism and make the
+    When run, the `secret_treasure` executable will ask for a secret key. If given an incorrect key, the program will exit.
+
+2. Use a debugger to bypass this password mechanism and make the
    program function normally. Instead of exiting, it will print out a
-   random quote from the file `fortunes.enc`. This is done by modifying
+   random quote from the file `treasures.enc`. This is done by modifying
    variables, registers, return addresses, etc. using the
    debugger. (See the ddd manual or gdb manual for help)
 
-1. Now that you understand the code, open the executable in a hex
+3. Now that you understand the code, open the executable in a hex
    editor (e.g., bless, vim) and modify the assembly code so that you
-   can obtain a fortune every time you run the program. Perhaps any CD
-   key that you enter will now work, for instance. You may be able to
-   insert noops (0x90) to effectively crack the
-   executable. Dr. Seamons was able to do this by modifying just one
-   byte in the executable using vim as a hex editor. The result will
-   be a new executable file that you can run and obtain a fortune.
+   can obtain a treasure every time you run the program. Perhaps any 
+   key that you enter will now work, for instance. You may be able to insert noops (0x90)  or change a comparison to effectively crack the
+   executable. The result will be a new executable file that you can run to obtain a treasure.
    
-1. Find a way to obtain all of the plaintext fortunes from
-fortunes.enc using the debugger.
+4. Find a way to obtain all of the plaintext treasures from
+treasures.enc using the debugger.  
+
+   *There may be some treasures that never print when running `secret_treasure` normally...*
+  
+Generate a written report for the lab that addresses the following list of items. These items are listed in no particular order.  Organize your report as needed.
+
+   *  A discussion of how you used the debugger to bypass the password mechanism. What variables did you modify? Please include a screenshot of the debugger in your report.
+	
+   *  A discussion of how you edited the program to bypass the password mechanism.
+	
+   *  A brief description of how you obtained all the treasures and  what you did to ensure that you have extracted all the treasures.  There are many possible methods of doing this which are likely acceptable. 
+
+   * A plain text section containing the list of all treasures from the treasures.enc file
+
+   * A summary of the project, the goal, and the steps you took. Include enough detail that I could understand what the purposes of this project were, what steps you took and what your results were. The goal is that you will be able to go back, 2 years from now, and read this report to help you remember everything you did.
+
+
+Submit a PDF of your report on Learning Suite, including all the
+things asked for in each section.
 
 ## Tips
 
-To run `fortune_static` on a Linux machine, be sure it is set to be
-executable. You can do this with:
+You can run `secret_treasure` with the following command:
 
 ```
-chmod u+x fortune_static
+./secret_treasure treasures.enc
 ```
 
-To disassemble `fortune_static` while keeping the hex values for each
+To disassemble `secret_treasure` while keeping the hex values for each
 instruction that is executed, use the following command in the
 terminal:
 
 ```
-objdump -d fortune_static > dump.txt
+objdump -M intel -d secret_treasure > dump.txt
 ```
 
 This will disassemble the entire program and store the result in the file dump.txt
 
-## Report
+You can edit binary files with a text editor such as vim. After opening the binary file in vim with `vi -b secret_treasure` (the **-b** flag makes editing binary files easier), run the following command to display hex values instead:
 
-Generate a written report for the lab that addresses the following items. Please number each item for clarity.
+```
+:%! xxd
+```
 
-1.  How did you use the debugger to bypass the password mechanism?
-    What variables did you modify? Please include a screenshot of the
-    debugger in your report.
-	
-1. How did you edit the program to bypass the cdkey mechanism?
-	
-1. How did you obtain all the fortunes from the encrypted file?
+After editing any hex values, convert it back to binary with the following command:
 
-Include the following in your report.
+```
+:%! xxd -r
+```
 
-* a plain text section containing the list of all fortunes from the
-  fortunes.enc file
-
-* a screenshot of the debugger that shows you were able to access the
-  plain text fortunes in memory.
+## Helpful Resources
+To do well on this project, you should know how to use a debugger and understand the architecture of a x86-64 computer. Here are some resources to help you get started:
 
 
-## NOTE:
-* Using probabilistic methods to extract all the fortunes will not receive full credit.  You should include a brief description of what you did to ensure that you have extracted all the fortunes.  A NOT acceptable description would be "I ran the program 1000 times and collected all the unique outputs."  An example of an acceptable solution would be "A used the debugger to change the output of the random number generator sequentially walking through all possibilities." or "I extracted the key that was used to encrypt the fortune file and decrypted it." or "I found where the decrypted fortunes were in memory and printed them all from there from the debugger." There are other possible methods of doing this which are likely acceptable. 
+* [<b>gdb tutorial</b>](/fall-2023/projects/gdb_tutorial.html)
+* [gdb cheatsheet](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)
 
-## Submission
+* [x86_64 calling conventions](https://aaronbloomfield.github.io/pdr/book/x86-64bit-ccc-chapter.pdf)
+* [The Stack](https://www.youtube.com/watch?v=uklonOb49DA)
+* [Procedures and Stacks](https://www.youtube.com/watch?v=uS4KO-rpvsU)
+* [Understanding x86-64 registers](https://web.stanford.edu/class/archive/cs/cs107/cs107.1226/guide/x86-64.html)
 
-Submit a PDF of your report on Learning Suite, including all the
-things asked for in each section.
 
 {% endfilter %}
 
