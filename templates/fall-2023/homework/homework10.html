@@ -4,95 +4,125 @@
 
 {% filter markdown %}
 
-# Homework #9
-
-This homework is intended to introduce you to the `gdb` debugger,
-understand how to examine and update memory locations `gdb`, and gain
-experience with how the runtime stack is organized.
-
-In addition to the lecture material, you can watch this [introductory
-video on buffer overflow
-attacks](https://www.youtube.com/watch?v=RF7DF4kfs1E).
-
-The file
-[examine_stack.c](http://faculty.cs.byu.edu/~seamons/examine_stack.c)
-makes a series of function calls main → freshman → sophomore → junior
-→ senior. Compile the program and run it in the debugger, breaking
-somewhere in function senior. Print out all of the stack activation
-frames, and label as many memory locations as you can.
-
-Not all the stack locations will be labeled. Extra space may be
-allocated on the stack that is set to uninitialized values that
-already existing in memory. Be sure to label the following elements
-for all four functions. You should be able to identify
-
-1. return addresses
-1. saved frame pointers (ebp)
-1. local variables
-1. function arguments
-
-For example, if you had a function that looked like this:
-
-  <img src="/static/img/func2.png" width=300>
-
-Then you might label things like this:
-
-  <img src="/static/img/func1.png" width = 500>
+# Homework #10
 
 
-Use the “info frame” gdb command to compare the information you
-labeled with what the debugger reports is in each stack frame. You may
-print out a hard copy, write on it to label all the items, and turn in
-a scan of the hard copy. You may also create your result
-electronically. Make it easy for the TAs to grade.
+The purpose of this homework is to introduce you to the `gdb` debugger and to get you started examining stack frames and registers in the x86-64 bit architecture.
 
-Compile the program with the -m32 compiler option. We will use a
-32-bit program for simplicity. You should also compile with -g to give
-debugging info.
+The file [examine_stack.c](http://faculty.cs.byu.edu/~seamons/examine_stack.c) makes a series of function calls (`main → freshman → sophomore → junior → senior`). Compile the program and set a breakpoint in the freshman, sophomore, junior, and senior functions. At each breakpoint, examine the registers and stack frame used for storing function arguments and local variables.
 
-## Useful GDB Debugger Commands
+The first 6 function arguments are stored in the `rdi`, `rsi`, `rdx`, `rcx`, `r8`, and `r9` respectively. However, this only applies to certain variable types. If you don't see the variable you expect in a certain register, try looking at the stack by examining the `rsp` register.
 
-See [this cheat sheat](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf).
+Function local variables are stored in registers and on the stack.
 
-> // start debugger from the command line
+A quick refresher (or introduction) can be found in the lecture materials page of this website and/or 
+&nbsp;<p>
+[x86_64 calling conventions](https://aaronbloomfield.github.io/pdr/book/x86-64bit-ccc-chapter.pdf)
+&nbsp;<p>
+[The Stack](https://www.youtube.com/watch?v=uklonOb49DA)
+&nbsp;<p>
+[Procedures and Stacks](https://www.youtube.com/watch?v=uS4KO-rpvsU)
 
-> gdb [executable name]
 
-> // list source code, hit [enter] to list more
+## Example
 
-> (gdb) list 1
+Here's how you would examine the registers and local variables of the `freshman` function.
 
-> // set break point at line 10
+1. Compile examine_stack.c with debugging symbols (so you can step through the program):
 
-> (gdb) break 10
+    <pre>
+    gcc examine_stack.c -o examine_stack -g
+    </pre>
 
-> // start running program, enter parameters
+2. Run `gdb` with examine_stack as the input:
 
-> (gdb) run [parameters]
+    <pre>
+    gdb examine_stack
+    </pre>
 
-> // execute the next line of code and pause
+3. Set a breakpoint in the main function:
 
-> (gdb) step
+    <pre>
+    (gdb) b freshman
+    </pre>
 
-> // display values of registers or variables
+4. Run the program
+   
+    <pre>
+    (gdb) run
+    </pre>
 
-> (gdb) print $esp
+5. Examine the registers:
 
-> // examine a block (32 words) of memory in hex
+    <pre>
+    (gdb) i r
+    </pre>
+    
+    You should see something like this:
+    <pre>
+    rax            0xc                 12
+    rbx            0x0                 0
+    rcx            0x19                25
+    rdx            0x7dc               2012
+    rsi            0x19                25
+    rdi            0xc                 12
+    </pre>
 
-> (gdb) x /32xw [address]
+    In the `main` function, `freshman` was called with 3 arguments: month(12), day(25), and year(2012). When you look at the `rdi`, `rsi`, and `rdx` registers, you can see those arguments.
 
-> // change the value of a memory address pointer
+6. Step through `freshman` until the local variables get placed on the stack:
+   
+    <pre>
+    (gdb) step
+    28        char housing[30] = "Helaman Halls";
+    (gdb) step
+    29        sophomore (a + b, c);
+    </pre>
 
-> (gdb) set *(int *)[addr] = [val]
+7. Examine the stack to find the `housing` variable:
+   
+    <pre>
+    (gdb) x/4gx $rsp
+    </pre>
 
-> // see the assembly code stored in memory
+    This will print out 4 sequential 64-bit sections of `rsp` (the stack pointer). You should get output similar to this, although the memory addresses may differ on your machine:
 
-> (gdb) disassemble main
+    <pre>
+    0x7fffffffe4b0: 0x000007dc55554040      0x0000000c00000019
+    0x7fffffffe4c0: 0x206e616d616c6548      0x000000736c6c6148
+    </pre>
+
+    At first glance, it may seem like "Helaman Halls" isn't there. However, you have to remember that everything here is displayed in hexidecimal. "Helaman Halls" in hexidecimal becomes `48 65 6C 61 6D 61 6E 20 48 61 6C 6C 73`, which *is* found in `rsp`, although the endianness is different.
+
+    Another thing you can do is change the command to print each address as a string, like this:
+
+    <pre>
+    (gdb) x/10s $rsp
+    </pre>
+
+    You'll have to increase the number after `x/` since it treats strings differently. With the previous command, you should get output like this:
+
+    <pre>
+    0x7fffffffe4b0: "@@UU\334\a"
+    0x7fffffffe4b7: ""
+    0x7fffffffe4b8: "\031"
+    0x7fffffffe4ba: ""
+    0x7fffffffe4bb: ""
+    0x7fffffffe4bc: "\f"
+    0x7fffffffe4be: ""
+    0x7fffffffe4bf: ""
+    0x7fffffffe4c0: "Helaman Halls"
+    0x7fffffffe4ce: ""
+    </pre>
+
+You'll be doing this process for the rest of the functions as well (excluding `main`).  You may need to print out more of the stack to find some values. If a variable is passed in by reference, you may need to print its memory address.
 
 ## Submission
 
-Submit a PDF via Learning Suite.
+Submit a pdf containing the following:
+
+1. Screenshots showing the (labeled) registers/stack frames where each function argument is stored. This should be done for every function other than `main`.
+2. Screenshots showing the (labeled) stack frames where each local variable is stored.  This should be done for each function other than `main`.
 
 {% endfilter %}
 
