@@ -5,80 +5,159 @@
 {% filter markdown %}
 
 
-##### NEEDS TO BE UPDATED - do not do this as shown for 2023
-##### NEEDS TO BE UPDATED - do not do this as shown for 2023
-##### NEEDS TO BE UPDATED - do not do this as shown for 2023
-##### NEEDS TO BE UPDATED - do not do this as shown for 2023
+# Project 7: Password Cracking 
 
-# Project 7: Password Cracking
+## Preliminary Setup
+
+This project is intended to be completed by running virtual machine that we have prebuilt for you.  You can find the details of how to get it up and runing  [HERE](/fall-2023/projects/virtual_machine_setup) </b>.  You are welcome to install the virtual machine on inside your CS account, or anywhere you have access to a commputer that you can run virtualbox on.  You can also install the software manually on any linux system you have administrative access to.  Note:  You can not run JTR directly inside your CS department account.  The systems are running malware detection software which will flag your account as possibly compromised.  Either run the VM or run the software directly on your own hardware.
+
 
 ## Objectives
+
+* Learn what makes a password secure
+
+* Gain knowledge of popular password cracking tools
 
 * Gain further intuition regarding the strength of passwords against
 modern computing power and algorithms.
 
-* Gain knowledge of popular password cracking tools
+## Overview
 
-* Critically assess password strength, and make judgments about the
-future of password security
+Passwords are one of the main defenses protecting all personal information online. They help secure your bank accounts, school information, and much more. As computer scientists, it is your responsibility to learn how to store passwords securely and protect the information of those who use your software.
+
+## Important Definitions
+
+Throughout this project, I will refer to a few important terms. Here are brief explanations of each:
+
+**Hash** 
+> Storing passwords in plain text is insecure. If someone were to gain access to a password file, they would have all passwords readily available. Therefore, most organizations opt to store a transformed version of each password called a *hash*. Cryptographic hases are used to transform the password into something that we can store and compare later.    
+
+>&nbsp;
+
+>A good hashing algorithm will take the original password and change it in such a way that the result is randomly picked from the hashing algorithm's possible outputs. For example, if I used `password123` as input to the `MD5` hashing algorithm, the output would be `482C811DA5D5B4BC6D497FFA98491E38`.
+>&nbsp; 
+> This means we can test to see if someone knows a password by hashing their entry and comparing that with a saved hash.  We can then see they know the password without storing the password - meaing that gaining access to the stored password hashes does not give an attacker access to the system itself.
+
+**Salt**
+> Although hashing provides extra security, it is still vulnerable to certain attacks. Online, you can find databases of common passwords with their respective hashes. If a hacker were to steal a password file with hashed versions of each password, they could easily determine the original form of any common passwords.
+
+>&nbsp; 
+
+> To combat these databases of passwords and hashes, many organizations use *salts* along with their hashes. A salt is a random string of characters that gets created when a new password hash is stored. The salt is appended, prepended, or mixed in with the original password so that the resulting hash is different from any duplicate passwords. Therefore, a hashed and salted version of `password123` would look different from another hashed and salted version of `password123`.
+
+**Brute Force Attack**
+> A *brute force attack* refers to when a hacker attempts to crack a hashed password by trying every possible combination. They would generate a new input, pass it through the hashing algorithm, then compare it with the target to see if they found a match (just like in the *Hash Attack* lab).
+
+**Dictionary Attack**
+> A *dictionary attack* refers to when a hacker utilizes a dictionary/wordlist of common passwords to try to crack a hashed password. They may also include *wordlist rules*, which add variations to each word in the wordlist. These variations might include capitalizing the first letter, replacing `a` characters with `@`, or adding a number at the end. For example, a wordlist rule may change `password` to `P@ssword1`.
+
 
 ## Instructions
 
-1. Read about the Unix password file formats, [/etc/passwd](http://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/) and [/etc/shadow](http://www.cyberciti.biz/faq/understanding-etcshadow-file/). In particular, make sure you understand where and how usernames, salts, and hashed passwords are stored.
+1. Here is a list of usernames and passwords to use as a hash file:
+   
+    <pre>
+        frank:9f9d51bc70ef21ca5c14f307980a29d8 
+        albert:b8b6718e7b997beaef8354ee1a1375a9 
+        susan:1f0d628aff498776c391d147d3f8d605 
+        shaniqua:a54eb809d56e632a229a27507664b3bd
+        lafawnda:8b6e10530f75d23c0a0eca4d5671db7d
+    </pre>
 
-1. Create a simple program that can generate dummy passwd and shadow files, given user input of a username and password (plaintext). The input can be in whatever format you would like (single entry from command-line, list of entries from a file, etc.). You can use the crypt() function in C to create a Unix password style MD5 hash (include crypt.h). You may use any value you wish, constant or otherwise, for your salts, so long as they adhere to the salt charset rules. Example [passwd](/static/files/passwd.txt) and [shadow](/static/files/shadow.txt)
-files are available.
-  
-1.  Test the passwd and shadow files generated by your program to ensure that they are formatted properly. You will run into problems if they are not. The pwck command
-should help with this.
-  
-1.  Download and install the correct version of John the Ripper for your operating system.
+2. Try brute forcing the provided hashes with either `John the Ripper` or `Hashcat`, both of which are popular password-cracking tools. Here is the documentation for each:
+    * [John the Ripper](https://www.openwall.com/john/doc/)
+    * [Hashcat](https://hashcat.net/wiki/)  
 
-1. Using the [documentation](http://www.openwall.com/john/doc/) (I also found [this](https://linuxconfig.org/password-cracking-with-john-the-ripper-on-linux) to be a useful start for linux users), figure out how to use John the Ripper. In particular, figure out how to use the “unshadow” utility bundled with John the Ripper, how to set minimum and maximum lengths for cracking, and how to use a custom wordlist.
+    John the Ripper and Hashcat both accept password files formated like `username:hash`, with each entry on a different line.
 
-1. Use this [password strength meter](http://www.passwordmeter.com/). to create passwords at various strength levels. For each strength type, make a password that contains:
+    To run John the Ripper for MD5 hashes, use this command:
 
-    * Only lowercase letters
-    * Both lowercase and uppercase letters
-    * Lower and uppercase letters, numeric digits, and punctuation
+    ```
+    john --format=raw-md5 <hashfile>
+    ```    
 
-1. Using the program you wrote in step 2, create passwd and shadow files for each password strength type.
+    For Hashcat, use this command:
 
-1. Use John the Ripper to try and crack the passwords you have created. Start with the weak passwords and work your way up until you find that you are unable to crack the passwords in a realistic time frame. Feel free to use any heuristic that John the Ripper allows, and experiment with other wordlists too. There are many free wordlists online. We host a [decent one](/static/files/cracklib.txt), but there are far more robust ones elsewhere. You may also experiment with running John the Ripper on multiple machines, with each instance operating on a subset of your passwords. As John the Ripper runs, you may hit any key to view some statistics. One of these is comparisons per second (c/s). Roughly keep track of the average number of comparisons per second that John the Ripper attains during your cracking.
+    ```
+    hashcat -m 0 -a 0 --username <hashfile>
+    ```
 
-1. As you crack increasingly secure passwords, it may be useful to use multiple machines to run simultaneous instances of John the Ripper. If you choose to do this on the CS lab machines, please do not use any more than 6 machines.
+    *Hashcat doesn't recognize `username:hash` by default, so you have to include the `--username` flag here*
 
-1. Additionally, be sure to run your John the Ripper processes in the background in a high “nice” mode. This will make sure that our cracking processes do not interfere with other students' activities on the lab machines. To run a command with a high nice mode, you can use
+    Let it run for about 30 seconds. You'll notice that it finds the first password almost immediately, but struggles finding the rest. Press `CTRL C` to stop the program.
 
-> nice -n 15 [command] [args]
+    You can see the results by adding `--show` to the command (for both tools).
 
-where [command] is the name of your binary and [args] are the arguments passed to it. If you fail to use nice, the sysadmins will likely have to kill your process and will disable your account.
+3. Go read this small tutorial on how to create and use your own custom rule lists with JTR and Hashcat <b> [TUTORIAL](/fall-2023/projects/jtr_hashcat_tutorial) </b>
 
-## Questions
+3. Now try a dictionary attack. Use the following wordlist:
 
-Thoughtfully answer the questions below. Submit your answers for passoff.
+    <pre>
+       avengers
+       assemble
+       batman
+       drstrange
+       ironman
+       spiderman
+       superman
+       thor
+       wonderwoman
+    </pre>
 
-1. Assuming that you used your setup for this lab alone, how long do you calculate that it would take to crack a 6-character alphanumeric password? 8-characters?  10-characters? 12-characters? (use the c/s measurement from your experiments).
+        
+    Create some custom rules to add variation to this wordlist and crack the passwords.
 
-1. Do you think that the password meter is a good indication of actual password security? From the results of your experiment, what is your recommendation for minimum password length? Be creative in your response. Imagine what hardware and resources a potential attacker might have, and briefly justify your assessment of the attacker’s capabilities.
+    To specify a wordlist, use
 
-1. Recently, high-end GPUs have revolutionized password cracking. One tool, [ighashgpu](https://www.darknet.org.uk/2016/08/ighashgpu-gpu-based-hash-cracking-sha1-md5-md4/), is able to perform 1.3 billion MD5 hashes per second on an AMD Radeon 5850 (a 2-year-old, mid-to-high range video card). [Whitepixel](http://whitepixel.zorinaq.com/), another tool, claims that it can perform 33.1 billion hashes per second using 4 Radeon 5970s. Consider your calculations in question #1, and redo them assuming you had access to a system with 4 Radeon 5970s. Do your answers for question #2 change?
+    <pre>
+    john --format=raw-md5 <hashfile> -wordlist=<wordlist>
+    </pre>
 
-1. Fedora 14 and other modern Linux distributions use a SHA-512 (rather than MD5) for hashing passwords. Does the use of this hashing algorithm improve password security in some way? Why or why not?
+    for John the Ripper and 
 
-1. Does the use of a salt increase password security? Why or why not?
+    <pre>
+    hashcat -m 0 -a 3 --username <hashfile> -wordlist <wordlist>
+    </pre>
 
-1. Against any competent system, an online attack of this nature would not be possible due to network lag, timeouts, and throttling by the system administrator. Does this knowledge lessen the importance of offline password attack protection?
+    for Hashcat.
 
-1. OPTIONAL QUESTION: The sheer power of GPUs make John the Ripper pale in comparison, despite all the heuristics John the Ripper employs. With hardware continually becoming more powerful, do you foresee a day in the near future when minimal password lengths will be too large for a typical person to remember? If so, what types of vulnerabilities may arise from such a scenario? What would you recommend as the next step in password evolution?﻿
 
-1. Extra Credit (5 points) Download and use hashcat. Compare usage to john the ripper.
 
-1. Extra Credit2 (5 points) If you have your own hardware available, try to use hashcat with a GPU and compare CPU versus GPU hashing speeds for similar inputs.
+4. Answer the following questions:
+    1. Did you use John the Ripper, Hashcat, or both?
+    2. What are the 5 passwords you found? Please provide them in the following format:
+    <pre>
+    frank:<password>
+    albert:<password>
+    susan:<password>
+    shaniqua:<password>
+    lafawnda:<password>
+    </pre>
+    3. Assuming that you used your setup for this lab alone, how long do you calculate that it would take to crack a 6-character alphanumeric password? 8-characters? 10-characters? 12-characters? (use the `c/s` or `H/s` measurement from your experiments).
+    4. Recently, high-end GPUs have revolutionized password cracking. Hashcat used 8 Nvidia RTX 4090s to reportedly achieve 300 billion hashes per second. Consider your calculations in question #1, and redo them assuming you had access to a system with 8 Nvidia RTX 4090s. Do your answers for question #2 change?
+    5. Does the use of a salt increase password security? Why or why not?
+    6. Modern Linux distributions use a SHA-512 (rather than MD5) for hashing passwords. Does the use of this hashing algorithm improve password security in some way? Why or why not?
+    7. Against any competent system, an online attack of this nature would not be possible due to network lag, timeouts, and throttling by the system administrator. Does this knowledge lessen the importance of offline password attack protection?
 
 ## Submission
 
-Submit a PDF of your report on Learning Suite.
+Submit a pdf report to LearningSuite with the following:
+    <p>&nbsp;
+- A summary of the project, the goal and the steps you took.  Include enough detail that I could understand what the purposes of this project were, what steps you took and what your results were.  The goal is that you will be able to go back, 2 years from now, and read this report to help you remember everything you did.  You'll be telling a coworker "Hold on a second - I did a project 2 years ago using JTR cracking passwords - let me go back, read my report and refresh my memory how it works!"
+    <p>&nbsp;
+- Your answers to the 7 questions
+    <p>&nbsp;
+- Your custom rule(s) and an explanation of what they do
+    <p>&nbsp;
+- Of course, like always, you need your name, the class, the date, etc on your report. Would graphs help anywhere on this report?  Useful tables?  Make it easy for me, and future you to understand.
+
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+
+<font size="-2">
+- special thanks to Joshua Esplin for his work to prepare this material and the virtual machine environment for this lab.
+</font>
 
 {% endfilter %}
 

@@ -8,11 +8,20 @@ static = '/static/lectures/f23/'
 pubs = '/static/pubs/'
 term = '/fall-2023/'
 
-@app.route('/fall-2023/lectures')
+
+#make sure we have a view that leads to a few extra things I want to get frozen
+@app.route( '/fall-2023/lectures' )
 def fall2023lectures():
     lecs = os.listdir(static[1:])
     return render_template(term + 'lectures.html', files=lecs, base=static )
 
+@app.route('/fall-2023/projects/jtr_hashcat_tutorial')
+def fall2023tutorial():
+    return render_template(term + 'projects/jtr_hashcat_tutorial.html', base=static )
+
+@app.route('/fall-2023/projects/virtual_machine_setup')
+def fall2023vmsetup():
+    return render_template(term + 'projects/virtual_machine_setup.html', base=static )
 
 @app.route('/fall-2023/schedule')
 def fall2023schedule():
