@@ -23,6 +23,10 @@ def fall2023tutorial():
 def fall2023vmsetup():
     return render_template(term + 'projects/virtual_machine_setup.html', base=static )
 
+@app.route('/fall-2023/projects/gdb_tutorial')
+def fall2023gdbtutorial():
+    return render_template(term + 'projects/gdb_tutorial.html', base=static )
+
 @app.route('/fall-2023/schedule')
 def fall2023schedule():
     s = Schedule()
