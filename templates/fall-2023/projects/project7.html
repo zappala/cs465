@@ -79,7 +79,7 @@ lafawnda:8b6e10530f75d23c0a0eca4d5671db7d
     For Hashcat, use this command:
 
     ```
-    hashcat -m 0 -a 0 --username <hashfile>
+    hashcat -m 0 -a 3 --username <hashfile>
     ```
 
     *Hashcat doesn't recognize `username:hash` by default, so you have to include the `--username` flag here*
@@ -142,7 +142,7 @@ Here are some resources to help you generate password hashes:
     lafawnda:<password>
     </pre>
     3. Assuming that you used your setup for this lab alone, how long do you calculate that it would take to crack a 6-character alphanumeric password? 8-characters? 10-characters? 12-characters? (use the `c/s` or `H/s` measurement from your experiments).
-    4. Recently, high-end GPUs have revolutionized password cracking. Hashcat used 8 Nvidia RTX 4090s to reportedly achieve 300 billion hashes per second. Consider your calculations in question #1, and redo them assuming you had access to a system with 8 Nvidia RTX 4090s. Do your answers for question #2 change?
+    4. Recently, high-end GPUs have revolutionized password cracking. Hashcat used 8 Nvidia RTX 4090s to reportedly achieve 300 billion hashes per second. Consider your calculations in question #3, and redo them assuming you had access to a system with 8 Nvidia RTX 4090s.
     5. Does the use of a salt increase password security? Why or why not?
     6. Modern Linux distributions use a SHA-512 (rather than MD5) for hashing passwords. Does the use of this hashing algorithm improve password security in some way? Why or why not?
     7. Against any competent system, an online attack of this nature would not be possible due to network lag, timeouts, and throttling by the system administrator. Does this knowledge lessen the importance of offline password attack protection?
