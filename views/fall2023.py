@@ -182,7 +182,7 @@ def fall2023schedule():
     d=s.day("Nov 7")
     d.assignment("Homework #10",term + 'homework/homework10')
     d.lecture("Binary Layout/Exploitation and Buffer Overflows")
-    d.slide("Stack Frame Layout Simplified", "https://docs.google.com/presentation/d/1FnqqExqirZTQYsI3kN_74OfyiQKBoIsNShXk2ApcNrI/edit#slide=id.p")
+    d.slide("Stack Frame Layout Simplified - 64", "https://docs.google.com/presentation/d/1KLlm3jnEW-yql4qrx4Ud8H3x0EmsJDeKNLKnfZ3Ogk8/edit?usp=sharing")
     d.slide("Buffer Overflow",static + "BufferOverflow.pdf")
     d.reading("Smashing the Stack For Fun and Profit","http://www.phrack.org/issues/49/14.html#article")
     d.reading("Smashing the Stack For Fun and Profit (Today)","https://travisf.net/smashing-the-stack-today")
@@ -200,7 +200,7 @@ def fall2023schedule():
     d = s.day("Nov 14")
     d.assignment("Homework #11", term + 'homework/homework11')
     d.lecture("Binary Layout/Exploitation and Buffer Overflows Part 3")
-    d.slide("Stack Frame Layout Simplified", "https://docs.google.com/presentation/d/1FnqqExqirZTQYsI3kN_74OfyiQKBoIsNShXk2ApcNrI/edit#slide=id.p")
+    d.slide("Stack Frame Layout Simplified - 64", "https://docs.google.com/presentation/d/1KLlm3jnEW-yql4qrx4Ud8H3x0EmsJDeKNLKnfZ3Ogk8/edit?usp=sharing")
     d.slide("Buffer Overflow",static + "BufferOverflow.pdf")
 
     d = s.day("Nov 16")
