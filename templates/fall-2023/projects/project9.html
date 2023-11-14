@@ -71,7 +71,7 @@ For this section, turn in a screenshot showing you doing this.
 
 Most often, there won't be a vulnerable function you can jump to that will just spawn a shell using a readily available `/bin/sh` string. In those scenarios, you have to resort to other methods.
 
-One such method is called `shellcode injection`. This refers to passing along with our overwritten instruction pointer, some machine code into the vulnerable buffer. You make the function's saved $EIP  point to  that buffer so that when your function returns, it runs your own code. 
+One such method is called `shellcode injection`. This refers to passing along with our overwritten instruction pointer, some machine code into the vulnerable buffer. You make the function's saved $RIP  point to  that buffer so that when your function returns, it runs your own code. 
 
 ##NOTE:  The version of overflow2 and overflow2.c that is included in this year's VM should be discarded.  USE THIS VERSION INSTEAD.
 
@@ -119,9 +119,9 @@ The creation of shellcode is a non-trivial task - but you could learn if it inte
   
     overflow2.c
   <pre>
-    #include <stdio.h>
-    #include <stdlib.h>
-    #include <string.h>
+    #include &lt;stdio.h&gt;
+    #include &lt;stdlib.h&gt;
+    #include &lt;string.h&gt;
 
     int main(int argc, char **argv) {
         char nameBuffer[100];
@@ -188,7 +188,7 @@ The creation of shellcode is a non-trivial task - but you could learn if it inte
   You're gong to write some input that will put your shell code in the buffer, and then overwrite the saved instruction pointer to make program control jump to your program.   There are some gotchas here - if you are handling binary data, there are some bytes that will count as whitespace (e.g. \x20) breaking your input into TWO arguments to the program.  Because of this I usually write a little python script that creates all my data so I can just put quotes around it without having to worry about shell-escaping quotes.
 
 
-  Since we're trying to find how many bytes past the end of the buffer we need to write to overwrite the saved $EIP, I like to use a known payload with something I can recognize in errors (e.g. like in dmsg).  So I use AAAAAAAABBBBBB   - there are 6 B's representing the place I want to put the address in, and I increment the number of As until the BBBBBB exactly line up in my ip:XXXXXXXXX in my error message - these are ascii capitol B which are (hex) 0x42, while A is 0x41.
+  Since we're trying to find how many bytes past the end of the buffer we need to write to overwrite the saved $RIP, I like to use a known payload with something I can recognize in errors (e.g. like in dmsg).  So I use AAAAAAAABBBBBB   - there are 6 B's representing the place I want to put the address in, and I increment the number of As until the BBBBBB exactly line up in my ip:XXXXXXXXX in my error message - these are ascii capitol B which are (hex) 0x42, while A is 0x41.
 
   For example 125 bytes in the buffer:
   <pre>
@@ -242,7 +242,7 @@ shellcode = b"\x48\x31\xf6\x56\x48\xbf\x2f\x62\x69\x6e\x2f\x2f\x73\x68\x57\x54\x
 #YOU NEED TO MAKE THIS BE THE ADDRESS OF nameBuffer, approximately
 target = b'\x00\x00\xff\xff\xff\x7f'
 
-#how many bytes we need to include in our payload to get 'target' written over main's saved EIP
+#how many bytes we need to include in our payload to get 'target' written over main's saved $RIP
 #YOU HAVE TO FIND THE RIGHT OFFSET HERE
 stackspot=100
 
