@@ -305,6 +305,11 @@ $
 
 You might have to adjust the target address you are trying to jump to a few times. 
 
+Once you get this working, Congrats!  You've solved your first buffer overflow challenge.  Unfortunately the program doesn't usually print for you the target address you're aiming for - you can only estimate it based on running it on your own hardware, or by static analysis and arithemetic from some other system address you were able to find out.  In this case you would use a NOP sled to increase your chances of getting your exploit to work.  This gives you a wide range of address offsets that will run successfully if you jump to them.  You can read about [nop sleds](https://en.wikipedia.org/wiki/NOP_slide) on wikipedia. 
+
+Increase your target address by 16 bytes.  Try your exploit - does it work?  Then adjust the sled size in your exploit template to 24 to and try again.  NOP sleds can make exploitation much easier. 
+
+
 Include your addresses, offsets, etc - what you needed to do to make your payload work in your final report.  Also include a screenshot of your success!
 
 

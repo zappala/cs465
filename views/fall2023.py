@@ -204,11 +204,9 @@ def fall2023schedule():
     d.slide("Buffer Overflow",static + "BufferOverflow.pdf")
 
     d = s.day("Nov 16")
-    d.lecture("Buffer Overflow wrapup / Mid-Term Exam 2 review")
+    d.lecture("Buffer Overflow Continued / Mid-Term Exam 2 review (last 10 min of class)")
     d.reading("Midterm Exam 2 study guide","https://docs.google.com/document/d/1suND4Z-r1uDvHMj8fSCWAyScR_1gjavcNu8SFtjPcCQ/edit#")
 
-    d = s.day("Nov 17")
-    d.assignment("Project #9: Buffer Overflow", term + 'projects/project9')
 
     d = s.day("Nov 18")
     d.lecture("Midterm Exam 2 Live on LearningSuite Nov 18 through 11:59 PM Nov 21")
@@ -216,6 +214,8 @@ def fall2023schedule():
 
     s.week()
 
+    d = s.day("Nov 20")
+    d.assignment("Extended Due Date - Project #9: Buffer Overflow", term + 'projects/project9')
 
     d = s.day("Nov 21")
     d.lecture("No Class Tuesday - Friday Instruction - also take your midterm")
