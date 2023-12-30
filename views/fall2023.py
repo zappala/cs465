@@ -209,7 +209,7 @@ def fall2023schedule():
 
 
     d = s.day("Nov 18")
-    d.lecture("Midterm Exam 2 Live on LearningSuite Nov 18 through 11:59 PM Nov 21")
+    d.lecture("Midterm Exam 2 Live on LearningSuite Nov 18 through 11:59 PM Nov 22")
 
 
     s.week()
@@ -219,7 +219,7 @@ def fall2023schedule():
 
     d = s.day("Nov 21")
     d.lecture("No Class Tuesday - Friday Instruction - also take your midterm")
-    d.assignment("Midterm Exam 2 Live on LearningSuite Nov 18 through 11:59 PM Nov 21")
+    d.assignment("Midterm Exam 2 Live on LearningSuite Nov 18 through 11:59 PM Nov 22")
 
     
     d = s.day("Nov 23")
@@ -229,31 +229,34 @@ def fall2023schedule():
     s.week()
     d = s.day("Nov 28")
     d.assignment("Homework #11", term + 'homework/homework11')
+    d.lecture("Secure Email")
     d.slide("Secure Email",static + "SecureEmail.pdf")
 
     d = s.day("Nov 30")
-    d.lecture("Secure Email (Midterm Exam 2 handback)")
+    d.lecture("Secure Email (Midterm Exam 2 handback possibly)")
     d.slide("Secure Email",static + "SecureEmail.pdf")
 
 
-    d = s.day("Dec 1")
-    d.assignment("Project #10: Secure Email", term + 'projects/project10')
 
     s.week()
 
     d = s.day("Dec 5")
-    d.assignment("Homework #11.5", term + 'homework/homework11')
-    d.lecture("Individual Privacy vs Public Good - class discussion")
+    d.lecture("Secure Email (Midterm Exam 2 handback possibly)")
+    d.slide("Secure Email",static + "SecureEmail.pdf")
+    d.assignment("Homework #11.5", term + 'homework/homework11.5')
+    d.assignment("Homework #12", term + 'homework/homework12')
 
     d = s.day("Dec 7")
     d.lecture("Integer Manipulation Vulnerabilities / Social Engineering")
-    #d.slide("Microsoft Whitepaper", "https://bit.ly/2I9nKPW")
-    #d.slide("Social Engineering", static + "social_engineering.pdf")
+    d.slide("Microsoft Whitepaper", "https://bit.ly/2I9nKPW")
+    d.slide("Social Engineering", static + "social_engineering.pdf")
+    d = s.day("Dec 8")
+    d.assignment("Project #10: Secure Email", term + 'projects/project10')
 
     s.week()
     d = s.day("Dec 12")
-    d.assignment("Homework #12: Extra Credit",term + 'homework/homework12')
-
+    d.assignment("Homework #13: Extra Credit",term + 'homework/homework13')
+    d.lecture("TBD")
     d = s.day("Dec 14")
     d.lecture("Last Day of Classes - Course Review and Final Exam review")
     d.slide("Exam Review", "https://docs.google.com/document/d/1suND4Z-r1uDvHMj8fSCWAyScR_1gjavcNu8SFtjPcCQ/edit?usp=sharing")
